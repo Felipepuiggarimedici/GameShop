@@ -4,6 +4,9 @@ function App() {
       <header className="App-header">
         <h1>GameShop</h1>
       </header>
+      <body>
+        <p>Text</p>
+      </body>
     </div>
   );
 }
