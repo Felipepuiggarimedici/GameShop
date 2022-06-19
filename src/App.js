@@ -1,12 +1,13 @@
 import React from 'react'
 import NavBar from "./components/NavBar'"
+import ItemListContainer from "./components/ItemListContainer.js"
 
 function App() {
   return (
     <>
     <NavBar />
     <main>
-      <p>Text</p>
+      <ItemListContainer greeting="Bienvenidos a GameShop"/>
     </main>
     </>
   );
