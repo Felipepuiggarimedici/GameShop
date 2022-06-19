@@ -1,0 +1,48 @@
+@import './../reUsedStyles/importReUsedStyles.scss';
+//Search bar position
+.searchBarContainer {
+  @extend .centreWithFlex;
+  form {
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+}
+//Text font in search bar
+.inputText {
+  font-family: 'OS-Regular';
+}
+//Magnifying glass button styling
+.SearchButton {
+  height: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 0ch;
+  background-color: $redColour;
+}
+
+//This was pulled out of this site https://www.w3schools.com/howto/howto_css_searchbar.asp
+//It is for the search in the navbar
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: $lightColour;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

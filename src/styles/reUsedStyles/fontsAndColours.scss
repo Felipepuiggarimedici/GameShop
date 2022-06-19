@@ -1,0 +1,21 @@
+$lightColour: #E9FFF9;
+$redColour: #D64045;
+$gradientDefault: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(80, 27, 105) 88%, rgba(157,0,255,1) 100%);
+$gradientNavBar: linear-gradient(90deg, rgba(233,255,249,1) 16%, rgba(2,0,36,1) 50%);
+
+@font-face {
+    font-family: 'OS-HeavySlanted';
+    src: local('OS-HeavySlanted'), url(./../../Typography/ObjectSans-HeavySlanted.otf) format('opentype');
+}
+@font-face {
+    font-family: 'OS-Slanted';
+    src: local('OS-Slanted'), url(./../../Typography/ObjectSans-Slanted.otf) format('opentype');
+}
+@font-face {
+    font-family: 'OS-Regular';
+    src: local('OS-Regular'), url(./../../Typography/ObjectSans-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'OS-Slanted';
+    src: local('OS-Slanted'), url(./../../Typography/ObjectSans-Slanted.otf) format('opentype');
+}

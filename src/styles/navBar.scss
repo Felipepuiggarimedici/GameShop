@@ -1,0 +1,18 @@
+@import './reUsedStyles/importReUsedStyles.scss';
+@import './navBarComponentStyles/cartWidget.scss';
+@import './navBarComponentStyles/logo.scss';
+@import './navBarComponentStyles/searchBar.scss';
+@import './navBarComponentStyles/menu.scss';
+//This is for aligning
+.topnav {
+     display: grid;
+     grid-template-columns: 4% 35% 16% 10% 15% 20%;   
+     form {
+        @extend .centreWithFlex;
+     }
+}
+//This is for the colour in the navbar background
+.topnav {
+  background: $gradientNavBar;
+}
+

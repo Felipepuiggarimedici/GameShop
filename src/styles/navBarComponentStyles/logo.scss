@@ -1,0 +1,12 @@
+@import './../reUsedStyles/importReUsedStyles.scss';
+.logo {
+    font-family: 'OS-HeavySlanted';
+    //This is for the colours
+    background: $gradientDefault;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo {
+    font-size: 200%;
+}

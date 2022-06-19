@@ -1,0 +1,25 @@
+@import './../reUsedStyles/importReUsedStyles.scss';
+
+//The colour of the cart
+.cart {
+    color: $lightColour;
+}
+
+//The size and proportion of the cart
+.cartWidgetContainer {
+    @extend .centreWithFlex;
+    #cartWidgetButton {
+        width: 50%;
+        height: 70%;
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;        
+        svg {
+            height: 50%;
+            width: 50%;
+            @extend .defaultImagesWithFlex;
+        }
+    }
+}
