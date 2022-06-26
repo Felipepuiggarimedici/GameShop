@@ -1,0 +1,5 @@
+[{"name":"Call of Duty Vanguard", "id" : 1, "price" : "1000", "image" : "/images/codVanguardImage.jpg"},
+{"name":"Battlefield 5", "id" : 2, "price" : "800", "image" : ""},
+{"name":"Elden Ring", "id" : 3, "price" : "1000", "image" : ""},
+{"name":"Dying Light 2", "id" : 4, "price" : "900", "image" : ""},
+{"name":"Lego Star Wars", "id" : 5, "price" : "700", "image" : ""}]

@@ -5,17 +5,17 @@ $gradientNavBar: linear-gradient(90deg, rgba(233,255,249,1) 16%, rgba(2,0,36,1) 
 
 @font-face {
     font-family: 'OS-HeavySlanted';
-    src: local('OS-HeavySlanted'), url(./../../Typography/ObjectSans-HeavySlanted.otf) format('opentype');
+    src: local('OS-HeavySlanted'), url(./../typography/ObjectSans-HeavySlanted.otf) format('opentype');
 }
 @font-face {
     font-family: 'OS-Slanted';
-    src: local('OS-Slanted'), url(./../../Typography/ObjectSans-Slanted.otf) format('opentype');
+    src: local('OS-Slanted'), url(./../typography/ObjectSans-Slanted.otf) format('opentype');
 }
 @font-face {
     font-family: 'OS-Regular';
-    src: local('OS-Regular'), url(./../../Typography/ObjectSans-Regular.otf) format('opentype');
+    src: local('OS-Regular'), url(./../typography/ObjectSans-Regular.otf) format('opentype');
 }
 @font-face {
     font-family: 'OS-Slanted';
-    src: local('OS-Slanted'), url(./../../Typography/ObjectSans-Slanted.otf) format('opentype');
+    src: local('OS-Slanted'), url(./../typography/ObjectSans-Slanted.otf) format('opentype');
 }
