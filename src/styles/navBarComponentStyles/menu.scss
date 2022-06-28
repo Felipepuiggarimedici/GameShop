@@ -4,14 +4,14 @@
     align-items: center;
     justify-content: baseline;
     .dropdown {
-        width: 50%;
+        width: 80%;
         .dropbtn {
             font-family: 'OS-Regular';
             font-size: 80%;
             width: 100%;
             svg {
-              width: 18;
-              height: 18;
+              width: 2em;
+              height: 2em;
             }
         }
     }
@@ -53,10 +53,10 @@
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #FCD0A1;}
+  .dropdown-content a:hover {background-color: $lightColour;}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #501B69;}
+  .dropdown:hover .dropbtn {background-color: $goldColour;}

@@ -5,7 +5,7 @@ import "./../../styles/itemCards/individualCardContainer.scss"
 const ItemList = ({gameList}) => {
     return <>
         {gameList.map((game) =>
-            <div >
+            <div className="cardContainer">
                 <Item 
                 key = {game.id}
                 name = {game.name} 

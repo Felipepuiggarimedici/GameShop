@@ -1,5 +1,6 @@
 @import './../reUsedStyles/importReUsedStyles.scss';
 
-.individualcardContainer {
+.cardContainer {
     @extend .centreWithFlex;
+    min-height: 100vh;
 }

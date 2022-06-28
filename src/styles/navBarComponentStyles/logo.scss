@@ -6,6 +6,11 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    font-size: 300%;
 }
 .logo {
     font-size: 200%;

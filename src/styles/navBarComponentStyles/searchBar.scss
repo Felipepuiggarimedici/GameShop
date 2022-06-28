@@ -7,6 +7,12 @@
     input {
       width: 100%;
     }
+    @extend .centreWithFlex;
+      height: 20%;
+      input, button {
+        height: 100%;
+        font-size: 100%;
+      }
   }
 }
 //Text font in search bar

@@ -1,7 +1,10 @@
-$lightColour: #E9FFF9;
-$redColour: #D64045;
-$gradientDefault: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(80, 27, 105) 88%, rgba(157,0,255,1) 100%);
-$gradientNavBar: linear-gradient(90deg, rgba(233,255,249,1) 16%, rgba(2,0,36,1) 50%);
+$lightColour: #F0F3F5;
+$redColour: #FF101F;
+$redBackground: #4A0000;
+$darkColour: #000000;
+$goldColour: #FFA630;
+$gradientDefault: linear-gradient(90deg, rgba(2,0,36,1) 100%, rgb(80, 27, 105) 88%, rgba(157,0,255,1) 0%);
+$gradientNavBar: linear-gradient(90deg, rgba(240,243,245,1) 0%, rgba(74,0,0,1) 51%, rgba(0,0,0,1) 99%);
 
 @font-face {
     font-family: 'OS-HeavySlanted';

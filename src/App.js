@@ -1,14 +1,17 @@
 import React from 'react'
 import NavBar from "./components/NavBar'"
-import ItemListContainer from "./components/items/ItemListContainer.js"
+import ItemListContainer from "./components/items/ItemListContainer.js";
+import "./styles/body.scss";
+import Particle from './components/Particle';
 
 function App() {
   return (
     <>
-    <NavBar />
     <main>
+      <NavBar />
       <ItemListContainer/>
     </main>
+    <Particle/>
     </>
   );
 }

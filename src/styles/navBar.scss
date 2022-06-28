@@ -7,9 +7,7 @@
 .topnav {
      display: grid;
      grid-template-columns: 4% 35% 16% 10% 15% 20%;   
-     form {
-        @extend .centreWithFlex;
-     }
+     height: 8em;
 }
 //This is for the colour in the navbar background
 .topnav {
