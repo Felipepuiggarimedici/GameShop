@@ -7,7 +7,8 @@ const ItemList = ({gameList}) => {
         {gameList.map((game) =>
             <div className="cardContainer">
                 <Item 
-                key = {game.id}
+                key = {game}
+                id = {game.id}
                 name = {game.name} 
                 price = {game.price}
                 image = {game.image}/>    

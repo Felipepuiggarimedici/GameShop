@@ -1,6 +1,9 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import getCategories from '../../helpers/getCategories';
 
 const Menu = () => {
+    const categories = getCategories();
     return <>
     <div className='MenuContainer'>
         <div className="dropdown">
@@ -11,9 +14,9 @@ const Menu = () => {
                 </svg>
             </button>
             <div className="dropdown-content">
-                <a href="#">Adventure</a>
-                <a href="#">RPG</a>
-                <a href="#">First Person Shooter</a>
+                {categories.map((category) => 
+                    <Link key={category} to={`/category/${category}`} >{category}</Link>
+                )}
             </div>
         </div>
     </div>

@@ -12,5 +12,11 @@
 //This is for the colour in the navbar background
 .topnav {
   background: $gradientNavBar;
+  a{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+  a:link { text-decoration: none; }
 }
 
