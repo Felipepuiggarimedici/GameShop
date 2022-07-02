@@ -1,4 +1,5 @@
 # Gameshop
 
-[a relative link](README_es.md)
-[a relative link](README_en.md)
+[Español](README_es.md)
+
+[English](README_en.md)
