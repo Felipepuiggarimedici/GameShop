@@ -1,5 +1,5 @@
 # Gameshop
-Selecciona el idioma/Choose the language
+Puede ver la versión en Español haciendo click aquí
 
 [Español](README_es.md)
 
