@@ -1,5 +1,32 @@
 @import './../reUsedStyles/importReUsedStyles.scss';
 
-.generalContainerOfDescriptions {
+.centreDescription {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
     color: $lightColour;
+}
+.descriptionContainer {
+    @extend .centreWithFlex;
+}
+.innerContainerOfDescription {
+    background-color: $darkColour;
+}
+.innerContainerOfDescription:nth-child(odd) {
+    display: flex;
+    justify-content:baseline;
+}
+.innerContainerOfDescription:nth-child(even) {
+    display: flex;
+    justify-content: flex-end;
+}
+.containerOfTextInDescriptionItem {
+    width: 50%;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    padding-bottom: 1vh;
+}
+.blankSpace {
+    grid-area: "blankSpace"; 
 }

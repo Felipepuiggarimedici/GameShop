@@ -13,7 +13,7 @@ const ItemDetail = (game) => {
                 <div className="cardInDetails">
 
                     <div className="contentBox">
-                        <h3 className="titleInListing">{game.name}</h3>
+                        <h3 className="titleInDetail">{game.name}</h3>
                         <h2 className="price">{game.price}$</h2>
                         <p className="buy">Add to Cart</p>
                     </div>
