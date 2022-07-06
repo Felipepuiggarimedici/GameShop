@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Description from "./Description";
 import "./../../styles/itemDetails/itemDetails.scss"
+import ItemCount from "./ItemCount";
 
 const ItemDetail = (game) => {
+
+    const [itemInCart, setItemInCart] = useState(false);
+    const onAdd = () => {
+        setItemInCart(true);
+    }
+    const onRemove = () => {
+        setItemInCart(false);
+    }
+    
     return <>
         <div className="contianerToCentre">
             <div className="itemDetailTopContainer">
@@ -15,7 +25,7 @@ const ItemDetail = (game) => {
                     <div className="contentBox">
                         <h3 className="titleInDetail">{game.name}</h3>
                         <h2 className="price">{game.price}$</h2>
-                        <p className="buy">Add to Cart</p>
+                        <ItemCount onAdd={onAdd} onRemove={onRemove} inCart={itemInCart} />
                     </div>
                 </div>
             </div>
