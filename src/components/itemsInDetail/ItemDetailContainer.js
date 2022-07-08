@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
     }, []);
     return <>
         {loading ? <LoadingScreen/> :
-            <div className="itemDetailContainer"><ItemDetail name = {game.name} price = {game.price} image={game.bigImage} details={game.description}/>
+            <div className="itemDetailContainer"><ItemDetail name = {game.name} price = {game.price} image={game.bigImage} details={game.description} id={game.id}/>
             </div>}
     </>
 }

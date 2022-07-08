@@ -9,17 +9,35 @@
 .cartWidgetContainer {
     @extend .centreWithFlex;
     #cartWidgetButton {
-        width: 50%;
-        height: 70%;
+        width: 30%;
+        height: 50%;
         background-color: Transparent;
         background-repeat:no-repeat;
         border: none;
         cursor:pointer;
-        overflow: hidden;        
+        overflow: hidden; 
+        .containerOfButtonAndSpan {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }      
         svg {
-            height: 50%;
-            width: 50%;
+            height: 100%;
+            width: 100%;
             @extend .defaultImagesWithFlex;
+        }
+        span {
+            background-color: $redColour;
+            color: #fff;
+            position: absolute;
+            right: 0%;
+            top: 15%;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            font-size: 12px;
+            padding-top: 2px;
+            border-radius:100%;
         }
     }
 }

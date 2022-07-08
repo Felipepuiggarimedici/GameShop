@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Description from "./Description";
 import "./../../styles/itemDetails/itemDetails.scss"
 import ItemCount from "./ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = (game) => {
 
-    const [itemInCart, setItemInCart] = useState(false);
+    const cartInfoAndMethods = useContext(CartContext);
+    const [itemInCart, setItemInCart] = useState(cartInfoAndMethods.isInCart(game.id));
+
     const onAdd = () => {
         setItemInCart(true);
+        cartInfoAndMethods.addItem(game);
     }
     const onRemove = () => {
+        cartInfoAndMethods.removeItem(game.id);
         setItemInCart(false);
     }
     
