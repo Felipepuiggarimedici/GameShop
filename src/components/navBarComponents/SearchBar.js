@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import getNamesAndIds from '../../helpers/getNamesAndIds';
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 const SearchBar = () => {
     const [searchPerformed, setSearch] = useState(false);
     const [result, setResult] = useState([]);
+
+    const routingInfo = useParams();
+    if (routingInfo === "") {
+        console.log(routingInfo)
+        setSearch(false);
+    }
 
     const retrieveNamesAndIds = async() => {
         let namesAndIds = null;
@@ -19,6 +25,7 @@ const SearchBar = () => {
         }
     }
     const attemptSearch = async(e) => {
+        e.preventDefault();
         const namesAndIds = await retrieveNamesAndIds();
         let searchString = e.target.value;
         if (searchString === "") {
@@ -37,24 +44,18 @@ const SearchBar = () => {
             //checks if the name is written in a shorter version
             const shortVersionNames = names.map((name) => name.slice(0, searchString.length));
             if (shortVersionNames.includes(searchString.toLowerCase())) {
-
-                setResult(...result, namesAndIds.find(game => game.name.slice(0, searchString.length).toLowerCase() === searchString.toLowerCase()).id);
+                setResult([...result, namesAndIds.find(game => game.name.slice(0, searchString.length).toLowerCase() === searchString.toLowerCase()).id]);
             }
         }
-        return result;
     }
-    useEffect(() => {
-        if (searchPerformed) {
-            <Navigate to= {`/search/${result}`}/>;
-        }
-    }, [searchPerformed]);
     
     return <>
     <div className="searchBarContainer">
-        <form action="/action_page.php">
+        <form>
             <input type="text" onChange={attemptSearch} placeholder="Search.." name="search" className='inputText'/>
             <button type="submit" className='SearchButton'><i className="fa fa-search"></i></button>
         </form>
+        {searchPerformed ? <Navigate to= {`/search/${result}`}/> : <></>}
     </div>
     </>
 }
