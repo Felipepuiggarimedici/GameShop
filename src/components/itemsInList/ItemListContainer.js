@@ -34,6 +34,7 @@ const ItemListContainer = () => {
         }
     }
     useEffect(() => {
+        setGameFound(true);
         setLoading(true);
         getGames();
         // eslint-disable-next-line
