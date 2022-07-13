@@ -1,19 +1,31 @@
 import React, { useEffect, useState }  from "react";
-import getData from "../../helpers/getData";
+import getDataByCategory from "../../helpers/getDataByCategory";
+import getDataById from "../../helpers/getDataById";
 import ItemList from "./ItemList";
 import "./../../styles/itemCards/cardContainer.scss";
 import "./../../styles/itemCards/purchaseInterface.scss";
 import LoadingScreen from "../LoadingScreen";
-import {useParams} from "react-router-dom";
+import {useParams, useLocation} from "react-router-dom";
 
 const ItemListContainer = () => {
     const [loading, setLoading]= useState(true);
     const [gameList, setGameList] = useState();
+    const [gameFound, setGameFound] = useState(true);
+    const location = useLocation().pathname;
     const routingInfo = useParams();
 
     const getGames = async() => {
+        let response = null;
         try {
-            const response = await getData(routingInfo);
+            if (location.startsWith("/search/")) {
+                response = await getDataById(routingInfo);
+            }
+            else {
+                response = await getDataByCategory(routingInfo);
+            }
+            if (response === 'No result') {
+                setGameFound(false);
+            }
             setGameList(response);
         }catch(error) {
             console.log("Data not found")
@@ -29,7 +41,7 @@ const ItemListContainer = () => {
 
     return <>
         <div className="itemListContainer">
-            {loading ? <LoadingScreen/> : <ItemList gameList = {gameList}/>}
+            {loading ? <LoadingScreen/> : gameFound ? <ItemList gameList = {gameList}/> : <h1>No game found</h1>}
         </div>
     </>
 }

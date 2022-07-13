@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import getNamesAndIds from '../../helpers/getNamesAndIds';
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
     const [searchPerformed, setSearch] = useState(false);
     const [result, setResult] = useState([]);
 
-    const routingInfo = useParams();
-    if (routingInfo === "") {
-        console.log(routingInfo)
-        setSearch(false);
-    }
+    const navigate = useNavigate();
 
     const retrieveNamesAndIds = async() => {
         let namesAndIds = null;
@@ -29,7 +25,8 @@ const SearchBar = () => {
         const namesAndIds = await retrieveNamesAndIds();
         let searchString = e.target.value;
         if (searchString === "") {
-            setResult(namesAndIds);
+            navigate(``);
+            setResult([]);
         }
         else {
             setSearch(true);
@@ -43,11 +40,21 @@ const SearchBar = () => {
         else {
             //checks if the name is written in a shorter version
             const shortVersionNames = names.map((name) => name.slice(0, searchString.length));
-            if (shortVersionNames.includes(searchString.toLowerCase())) {
+            if (shortVersionNames.includes(searchString.toLowerCase()) && searchString !== "") {
                 setResult([...result, namesAndIds.find(game => game.name.slice(0, searchString.length).toLowerCase() === searchString.toLowerCase()).id]);
+            }
+            else if (searchString !== "") {
+                navigate(`/search/noResult`);
+                setResult([]);
             }
         }
     }
+    useEffect(() =>{
+        if (searchPerformed && result.length !== 0 ) {
+            navigate(`/search/${result}`);
+        }
+        // eslint-disable-next-line
+    }, [searchPerformed, result]);
     
     return <>
     <div className="searchBarContainer">
@@ -55,7 +62,6 @@ const SearchBar = () => {
             <input type="text" onChange={attemptSearch} placeholder="Search.." name="search" className='inputText'/>
             <button type="submit" className='SearchButton'><i className="fa fa-search"></i></button>
         </form>
-        {searchPerformed ? <Navigate to= {`/search/${result}`}/> : <></>}
     </div>
     </>
 }
