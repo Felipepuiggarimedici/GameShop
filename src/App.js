@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from "./components/NavBar.js"
 import ItemListContainer from "./components/itemsInList/ItemListContainer.js";
-import Cart from "./components/Cart.js"
+import Cart from "./components/cartComponents/Cart.js"
 import "./styles/body.scss";
 import Particle from './components/Particle';
 import { BrowserRouter, Routes, Route } from "react-router-dom";

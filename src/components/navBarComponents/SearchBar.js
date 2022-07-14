@@ -60,7 +60,6 @@ const SearchBar = () => {
     <div className="searchBarContainer">
         <form>
             <input type="text" onChange={attemptSearch} placeholder="Search.." name="search" className='inputText'/>
-            <button type="submit" className='SearchButton'><i className="fa fa-search"></i></button>
         </form>
     </div>
     </>

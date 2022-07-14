@@ -8,6 +8,8 @@
 //The size and proportion of the cart
 .cartWidgetContainer {
     @extend .centreWithFlex;
+    width: 100%;
+    height: 100%;
     #cartWidgetButton {
         width: 25%;
         height: 50%;
