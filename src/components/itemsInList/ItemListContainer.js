@@ -28,7 +28,7 @@ const ItemListContainer = () => {
             }
             setGameList(response);
         }catch(error) {
-            console.log("Data not found")
+            console.log(error)
         }finally {
             setLoading(false);
         }

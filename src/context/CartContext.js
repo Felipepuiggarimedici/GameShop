@@ -15,7 +15,7 @@ const CartContextComponent = ({children}) => {
         }
     }
     const removeItem = (itemId) => {
-        setCart(cart.filter((item) => parseInt(item.id) !== itemId));
+        setCart(cart.filter((item) => item.id !== itemId));
     }
     const isInCart = (itemId) => {
         let isInCart = false;

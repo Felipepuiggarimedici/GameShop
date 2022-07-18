@@ -37,7 +37,7 @@ const ItemDetail = (game) => {
         </div>
 
         <div className="descriptionContainer">
-            <Description descriptionObj={game.details}/>
+            <Description key="description" descriptionObj={game.details}/>
         </div>
     </>
 }

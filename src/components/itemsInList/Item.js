@@ -3,7 +3,6 @@ import "./../../styles/itemCards/itemCard.scss";
 import {Link} from "react-router-dom";
 
 const Item = (props) => {
-
     //Card taken from https://codepen.io/sam_garcia2/pen/PozpPRy
     return <>
         <Link className="card" to={`/item/${props.id}`}>

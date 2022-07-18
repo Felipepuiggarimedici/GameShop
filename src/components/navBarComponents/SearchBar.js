@@ -42,6 +42,10 @@ const SearchBar = () => {
             const shortVersionNames = names.map((name) => name.slice(0, searchString.length));
             if (shortVersionNames.includes(searchString.toLowerCase()) && searchString !== "") {
                 setResult([...result, namesAndIds.find(game => game.name.slice(0, searchString.length).toLowerCase() === searchString.toLowerCase()).id]);
+                if (result.length !== 0) {
+                    //removes duplicates from result
+                    setResult([...new Set(result)])
+                }
             }
             else if (searchString !== "") {
                 navigate(`/search/noResult`);

@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
             setGame(response);
         }
         catch(error) {
-            console.log("Game not found")
+            console.log(error)
         }
         finally {
             setLoading(false);

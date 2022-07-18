@@ -13,6 +13,7 @@
     color: $lightColour;
     font-family: "OS-Regular";
     font-size: small;
+    margin-bottom: 5%;
     .itemInCartContainer {
         background-color: $darkColour;
         width: 100%;
@@ -24,6 +25,7 @@
         border-style: solid;
         border-width: 10px;
         border-bottom: none;
+        padding-bottom: 3%;
         .componentAOfItemInCart {
             height: 35vh;
             width: 100%;
@@ -46,7 +48,7 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: end;
+            justify-content: flex-end;
             .pricingAndButttons {
                 margin-right: 10%;
                 width: 50%;
@@ -84,19 +86,25 @@
     .finalPrice {
         margin-left: 70%;
     }
-    .backToHomeScreen {
-        font-family: "OS-Regular";
-        position: relative;
-        bottom: 0px;
-        padding: 10px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        color: #000000;
-        text-decoration: none;
-        background: $redColour;
-        border-radius: 30px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-align: center;
+    .backToHomeScreenContainer {
+        @extend .centreWithFlex;
+        .backToHomeScreen {
+            text-decoration: none;
+            width: 50%;
+            font-family: "OS-Regular";
+            font-size: small;
+            position: relative;
+            bottom: 0px;
+            padding: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: 30%;
+            color: #000000;
+            background: $redColour;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
     }
 }

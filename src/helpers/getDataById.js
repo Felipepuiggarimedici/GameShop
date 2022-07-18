@@ -1,20 +1,14 @@
-const getDataById = (currentIdString) => {
-    return new Promise((resolve, reject) => {
-      let condition = true;
-      setTimeout(()=>{
-        if(condition){
-          if (currentIdString.arrayOfIds === "noResult"){
-            resolve("No result");
-          }
-          else {
-            //credits to https://stackoverflow.com/questions/52189621/extract-numbers-from-array-mixed-with-strings-javascript
-            const filteredArray =  currentIdString.arrayOfIds.split(',').map(Number);
-            resolve(require("../data/games.json").filter((game) => filteredArray.includes(game.id)));
-          }
-        }else{
-          reject('Games not found')
-        }
-      }, 2000)
-  });
+import getDataByCategory from "./getDataByCategory.js";
+
+const getDataById = async (currentIdString) => {
+  if (currentIdString.arrayOfIds === "noResult"){
+      return "No result";
+  }
+  else { 
+    //credits to https://stackoverflow.com/questions/52189621/extract-numbers-from-array-mixed-with-strings-javascript
+    const filteredArray =  currentIdString.arrayOfIds.split(',');
+    const gameList = (await getDataByCategory({})).filter(game => filteredArray.includes(game.id));
+    return gameList;  
+  }
 }
 export default getDataById;

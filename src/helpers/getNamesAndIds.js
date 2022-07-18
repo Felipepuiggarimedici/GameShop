@@ -1,13 +1,11 @@
-const getNamesAndIds = () => {
-    return new Promise((res, rej) => {
-        try {
-            res(require("./../data/games.json").map((game) => {
-                return {name:game.name, id:game.id};
-            }));
-        }
-        catch(error) {
-            rej("Could not get games");
-        }
-    });
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../firebase/firebase.js";
+
+const getNamesAndIds = async() => {
+    const gamesCollection = collection(db, "gameData");
+    const gameSnapshot = await getDocs(gamesCollection);
+
+    const gameNamesAndIds = gameSnapshot.docs.map(doc => {return {id: doc.id, name: doc.data().name}});
+    return gameNamesAndIds;
 }
 export default getNamesAndIds;

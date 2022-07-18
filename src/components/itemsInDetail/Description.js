@@ -13,10 +13,10 @@ const Description = (description) => {
     }
 
     return <>
-        <div className="centreDescription">
+        <div key="descriptionCentre" className="centreDescription">
             {arrayForEachDescriptionClause.map((descriptionItem) => ( <>
-                <div className="innerContainerOfDescription">
-                    <div className={`containerOfTextInDescriptionItem`}>
+                <div key={descriptionItem[0]} className="innerContainerOfDescription">
+                    <div key={descriptionItem[0]} className={`containerOfTextInDescriptionItem`}>
                         <h3 className="subtitleInDescription">{descriptionItem[0]}</h3>
                         <p className="descriptionBulletPoint">{descriptionItem[1]}</p>
                     </div>
