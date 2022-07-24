@@ -1,5 +1,99 @@
 @import "./reUsedStyles/importReUsedStyles.scss";
 
-.loadingTitle {
-    color: $lightColour;
+.loaderContainer {
+    @extend .centreWithFlex;
+    width: 100%;
+}
+
+//credits to Matt Roelle https://codepen.io/Mattykins/pen/mJpEom for spinner
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+$size: 70px;
+$spinnerWidth: 0.8;
+$color: $goldColour;
+$maskColor: #1a0000;
+$animTime: 2.25s;
+$easing: ease;  
+$timing: $easing;
+
+$size: $size * 2;
+
+.spinner {
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+  overflow: hidden;
+  left: calc(50% - calc($size / 2));
+  transform: scale(0.5);
+}
+
+.mask {
+  width: $size * $spinnerWidth;
+  height: $size * $spinnerWidth;
+  background: $maskColor;
+  border-radius: 100%;
+  position: absolute;
+  top: $size * (0.5 - calc($spinnerWidth/2));
+  left: $size * (0.5 - calc($spinnerWidth/2));
+}
+
+.color {
+  width: $size;
+  height: $size;
+  animation: spin $animTime $easing infinite;
+  -webkit-animation: spin $animTime $easing infinite;
+  transition-timing-function: $easing;
+  -webkit-transition-timing-function: $easing;
+  border-radius: 100%;
+  background: linear-gradient($color 1%, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.spinner:before,
+.spinner:after {
+  content: " ";
+  z-index: 100;
+  display: block;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 100% 50%;
+  width: calc($size / 2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $maskColor;
+  height: $size;
+}
+
+.spinner:before {
+  animation: spin $animTime $easing infinite;
+  -webkit-animation: spin $animTime $easing infinite;
+  animation-delay: calc($animTime / 4);  
+  -webkit-animation-delay: calc($animTime / 4);
+  transition-timing-function: $easing;
+  -webkit-transition-timing-function: $easing;
+}
+.spinner:after {
+  animation: offsetSpin $animTime $easing infinite;
+  -webkit-animation: offsetSpin $animTime $easing infinite;
+   transition-timing-function: $easing;
+  -webkit-transition-timing-function: $easing;
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes offsetSpin {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(540deg);
+  }
 }

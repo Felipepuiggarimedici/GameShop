@@ -1,9 +1,9 @@
 import React from 'react'
-import NavBar from "./components/NavBar.js"
+import NavBar from "./components/navBarComponents/NavBar.js"
 import ItemListContainer from "./components/itemsInList/ItemListContainer.js";
 import Cart from "./components/cartComponents/Cart.js"
 import "./styles/body.scss";
-import Particle from './components/Particle';
+import Particle from './components/generalComponents/Particle';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/itemsInDetail/ItemDetailContainer';
 import CartContextComponent from './context/CartContext';

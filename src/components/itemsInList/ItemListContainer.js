@@ -4,7 +4,7 @@ import getDataById from "../../helpers/getDataById";
 import ItemList from "./ItemList";
 import "./../../styles/itemCards/cardContainer.scss";
 import "./../../styles/itemCards/purchaseInterface.scss";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../generalComponents/LoadingScreen.js";
 import {useParams, useLocation} from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -42,7 +42,7 @@ const ItemListContainer = () => {
 
     return <>
         <div className="itemListContainer">
-            {loading ? <LoadingScreen/> : gameFound ? <ItemList gameList = {gameList}/> : <h1>No game found</h1>}
+            {loading ? <><div></div> <LoadingScreen/></> : gameFound ? <ItemList gameList = {gameList}/> : <h1>No game found</h1>}
         </div>
     </>
 }

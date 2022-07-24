@@ -32,6 +32,7 @@ const ItemDetail = (game) => {
                         <h2 className="price">{game.price}$</h2>
                         <ItemCount onAdd={onAdd} onRemove={onRemove} inCart={itemInCart} />
                     </div>
+
                 </div>
             </div>
         </div>

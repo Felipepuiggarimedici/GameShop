@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import "./../styles/navBar.scss";
-import CartWidget from "./navBarComponents/CartWidget";
-import Logo from "./navBarComponents/Logo";
-import SearchBar from "./navBarComponents/SearchBar";    
-import Menu from "./navBarComponents/Menu";
+import "./../../styles/navBarComponentStyles/navBar.scss";
+import CartWidget from "./CartWidget";
+import Logo from "./Logo";
+import SearchBar from "./SearchBar";    
+import Menu from "./Menu";
 import {Link} from "react-router-dom";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const NavBar = () => {
 

@@ -11,12 +11,33 @@
     background-color: transparent !important;
     margin: 0 !important;
 }
+.buy {
+    text-align: center;
+}
 .smallRemoveButton {
     margin-top: 8% !important;
     background-color: $goldColour !important;
-    width: 30%;
+    width: 60%;
     height: 10%;
     padding-left: 10px !important;
     padding-right: 10px !important;
     font-size: 60% !important;
+    margin-bottom: 5% !important;
+}
+.contentBox .smallGoldButtonContainer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10%;
+    transition: 0.5s;
+    opacity: 0;
+}
+.contentBox .smallGoldButton {
+    color: $goldColour;
+    font-size: smaller;
+}
+.itemDetailTopContainer:hover .contentBox .smallGoldButtonContainer{
+    top: 0;
+    opacity: 1;
 }

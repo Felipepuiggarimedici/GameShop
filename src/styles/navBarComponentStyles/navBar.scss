@@ -1,8 +1,8 @@
-@import './reUsedStyles/importReUsedStyles.scss';
-@import './navBarComponentStyles/cartWidget.scss';
-@import './navBarComponentStyles/logo.scss';
-@import './navBarComponentStyles/searchBar.scss';
-@import './navBarComponentStyles/menu.scss';
+@import './../reUsedStyles/importReUsedStyles.scss';
+@import './cartWidget.scss';
+@import './logo.scss';
+@import './searchBar.scss';
+@import './menu.scss';
 //This is for aligning
 .topnav {
      display: grid;

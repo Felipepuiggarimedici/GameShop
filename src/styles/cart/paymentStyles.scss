@@ -1,0 +1,97 @@
+@import './../reUsedStyles/importReUsedStyles.scss';
+
+.proceedToPaymentContainer {
+    margin-left: 10%;
+    margin-bottom: 2%;
+    .proceedToPayment {
+        background: #FF101F;
+        font-family: "OS-Regular";
+        border-radius: 30px;
+        cursor: pointer;
+        width: 80%;
+        height: 100%;
+        font-size: large;
+    }    
+}
+.purchaseFormContainer {
+    margin-top: 3%;
+    background-color: $darkColour;
+    color: $lightColour;
+    border-color: $goldColour;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 10px;
+    width: 50%;
+    @extend .centreWithFlex;
+    flex-direction: column;
+    font-family: "OS-Regular";
+    margin-bottom: 5%;
+    font-size: x-large;
+    .titleOfForm {
+        font-size: 120% !important;
+        margin: 4%;
+        font-size: 150%;
+        width: 70%;
+        text-align: center;
+        border-bottom: 1px solid #FF101F;
+        padding-bottom: 2%;
+    }
+    .nameAndSurname,.address {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .firstName,.place {
+            width: 90%;
+        }
+
+    }
+    form div {
+        margin-top: 5%;
+        .labelAndInputContainer{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    .cardDetails {
+        margin-bottom: 5%;
+    }
+}
+.formInput {
+    background: transparent;
+    border: 2px solid $goldColour;
+    color: $lightColour;
+}
+.formInput:focus {
+    outline: none !important;
+    border: 2px solid $redColour;
+  }
+  label {
+    transition: all 0.3s ease;
+  }
+.submitButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 4%;
+    .submitButtonDiv {
+        margin-right: 5%;
+        @extend .centreWithFlex;
+        .submitButton {
+            border: none;
+            padding: 20%;
+            border-radius: 10px;
+            background-color: $redColour;
+            color: $darkColour;
+            font-family: "OS-HeavySlanted";
+        }
+        .submitButton:hover {
+            cursor: pointer;
+            background-color: $goldColour;
+        }
+    }
+}
+.fulfilledMessageContainer {
+    text-align: center;
+    margin-right: 4%;
+    margin-left: 4%;
+}

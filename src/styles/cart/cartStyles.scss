@@ -1,19 +1,23 @@
 @import './../reUsedStyles/importReUsedStyles.scss';
+.containerToCentre {
+    @extend .centreWithFlex;
+    flex-direction: column;
+}
 .generalCartContainer {
-    width: 100%;
+    width: 60%;
     height: 100%;
     @extend .centreWithFlex;
+    margin-bottom: 3%;
 }
 .cartItemsContainer {
     background-color: $darkColour;
-    width: 60%;
+    width: 100%;
     margin-top: 10%;
     display: grid;
     grid-template-columns: 100%;
     color: $lightColour;
     font-family: "OS-Regular";
     font-size: small;
-    margin-bottom: 5%;
     .itemInCartContainer {
         background-color: $darkColour;
         width: 100%;
@@ -54,6 +58,10 @@
                 width: 50%;
                 display: grid;
                 grid-template-columns: 60% 40%;
+                .itemPricing {
+                    font-family: "OS-Heavy";
+                    font-size: 150%;
+                }
                 .removeInCart {
                     background: $redColour;
                     font-family: "OS-Regular";
@@ -106,5 +114,24 @@
             letter-spacing: 1px;
             text-align: center;
         }
+    }
+}
+.cartItemsContainer .smallGoldButtonContainer {
+    opacity: 1;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .smallGoldButton {
+        background: none;
+        border: none;
+        padding: 0;
+        text-decoration: underline;
+        cursor: pointer; 
+        color: $goldColour;
+        font-family: "OS-Regular";
+        margin-right: 10%;
+        font-size: medium;
     }
 }

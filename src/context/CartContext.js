@@ -20,7 +20,7 @@ const CartContextComponent = ({children}) => {
     const isInCart = (itemId) => {
         let isInCart = false;
         cart.forEach(item => {
-            if (parseInt(item.id) === itemId) {
+            if (item.id === itemId) {
                 isInCart = true;
             }
         });

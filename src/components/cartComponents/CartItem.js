@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartItem = ({game, removeItem}) => {
+const CartItem = ({game, removeItem , endPurchase}) => {
     return <>
         <div className="itemInCartContainer">
             <div className="componentAOfItemInCart">
@@ -12,9 +12,10 @@ const CartItem = ({game, removeItem}) => {
             <div className="componentBOfItemInCart">
                 <div className="pricingAndButttons">
                     <div className="itemPricing"><p>{game.price}$</p></div>
+                    {endPurchase ? <div></div> : 
                     <button className="removeInCart" onClick={() => removeItem(game.id)}>
                         Remove
-                    </button>
+                    </button>}
                 </div>
             </div>
         </div>

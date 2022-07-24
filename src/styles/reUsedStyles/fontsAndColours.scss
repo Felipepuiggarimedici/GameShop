@@ -22,3 +22,7 @@ $gradientNavBar: linear-gradient(90deg, rgba(240,243,245,1) 0%, rgba(74,0,0,1) 5
     font-family: 'OS-Slanted';
     src: local('OS-Slanted'), url(./../typography/ObjectSans-Slanted.otf) format('opentype');
 }
+@font-face {
+    font-family: 'OS-Heavy';
+    src: local('OS-Heavy'), url(./../typography/ObjectSans-Heavy.otf) format('opentype');
+}

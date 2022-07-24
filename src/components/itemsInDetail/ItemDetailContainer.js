@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import getItemInfoById from "../../helpers/getItemInfoById.js";
-import LoadingScreen from "../LoadingScreen.js";
+import LoadingScreen from "../generalComponents/LoadingScreen.js";
 import ItemDetail from "./ItemDetail.js";
 import "./../../styles/itemDetails/itemDetailContainer.scss"
 
