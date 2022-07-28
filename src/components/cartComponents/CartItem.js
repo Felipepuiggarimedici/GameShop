@@ -11,7 +11,7 @@ const CartItem = ({game, removeItem , endPurchase}) => {
             </div>
             <div className="componentBOfItemInCart">
                 <div className="pricingAndButttons">
-                    <div className="itemPricing"><p>{game.price}$</p></div>
+                    <div className="itemPricing"><p>${game.price}</p></div>
                     {endPurchase ? <div></div> : 
                     <button className="removeInCart" onClick={() => removeItem(game.id)}>
                         Remove

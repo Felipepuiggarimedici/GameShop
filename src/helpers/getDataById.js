@@ -7,7 +7,7 @@ const getDataById = async (currentIdString) => {
   else { 
     //credits to https://stackoverflow.com/questions/52189621/extract-numbers-from-array-mixed-with-strings-javascript
     const filteredArray =  currentIdString.arrayOfIds.split(',');
-    const gameList = (await getDataByCategory({})).filter(game => filteredArray.includes(game.id));
+    const gameList = (await getDataByCategory({categoryName : "all"}, true)).filter(game => filteredArray.includes(game.id));
     return gameList;  
   }
 }

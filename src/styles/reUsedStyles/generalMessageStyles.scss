@@ -1,0 +1,23 @@
+@import "importReUsedStyles.scss";
+
+.generalMessageContainer {
+    width: 100%;
+    @extend .centreWithFlex;
+    height: 20vh;
+    div {
+        @extend .centreWithFlex;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 5px;
+        border-color: $goldColour;
+        width: 50%;
+        text-align: center; 
+        height: 10vh;
+        margin-bottom: 2%;  
+        background-color: $darkColour;
+
+        h1 {
+            color: $lightColour;
+        }
+    }
+}

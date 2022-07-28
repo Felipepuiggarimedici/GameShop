@@ -8,14 +8,33 @@ const CartContextComponent = ({children}) => {
 
     const addItem = (newItem) => {
         if (!isInCart(newItem.id)) {
-            setCart([...cart, newItem]);
+            setCart([...cart, {quantity: 1, id:newItem.id, name: newItem.name, price: newItem.price}]);
         }
         else {
-            console.log("Error: Item already in cart")
+            const cartUpdated = cart.map((cartItem) => {
+                let updatedItem = cartItem;
+                if (cartItem.id === newItem.id) {
+                    updatedItem.quantity = cartItem.quantity + 1;
+                }
+                return updatedItem;
+            });
+            setCart(cartUpdated);
         }
     }
     const removeItem = (itemId) => {
-        setCart(cart.filter((item) => item.id !== itemId));
+        let cartUpdated = cart.map((cartItem) => {
+            let updatedItem = cartItem;
+            if (cartItem.id === itemId) {
+                if (cartItem.quantity === 1) {
+                    return "";
+                } else {
+                    updatedItem.quantity = cartItem.quantity - 1;
+                }
+            }
+            return updatedItem;
+        });
+        cartUpdated = cartUpdated.filter((cartItem) => cartItem !== "");
+        setCart(cartUpdated);
     }
     const isInCart = (itemId) => {
         let isInCart = false;
@@ -29,8 +48,13 @@ const CartContextComponent = ({children}) => {
     const clear = () => {
         setCart([]);
     }
+    
     const getQuantity = () => {
-        return cart.length;
+        let counter = 0;
+        cart.forEach((cartItem) => {
+            counter += cartItem.quantity;
+        });
+        return counter;
     }
 
     return <>

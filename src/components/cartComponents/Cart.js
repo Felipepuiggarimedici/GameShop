@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import "./../../styles/cart/cartStyles.scss";
 import "./../../styles/cart/paymentStyles.scss";
 import PurchaseForm from "./PurchaseForm.js";
+import Footer from "../Footer.js";
 
 const Cart = () => {
 
@@ -47,7 +48,7 @@ const Cart = () => {
                             Total:
                         </p>
                         <p className="finalPrice">
-                            {cartTotal}$
+                            ${cartTotal}
                         </p>
                         <div className="proceedToPaymentContainer">
                             {endPurchase ? <></> : <button onClick={() => { setEndPurchase(true); handleScroll() }} className="proceedToPayment">Proceed to Payment</button>}
@@ -61,6 +62,7 @@ const Cart = () => {
         </div>
         {endPurchase ? <PurchaseForm cart={cart} total={cartTotal} ref={refForFinishingPurchase} clear={clear}/>:<></>}
     </div>
+    <Footer absolutePosition={false}/>
     </>
 }
 

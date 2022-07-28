@@ -1,0 +1,106 @@
+@import "./reUsedStyles/importReUsedStyles.scss";
+
+.absolutePosition {
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+}
+.aboutTextInFooter {
+    width: 60%;
+}
+//credits to Envato Tuts+ in https://codepen.io/tutsplus/pen/yWrEgW
+footer {
+    background-color: $darkColour;
+    color: $lightColour;
+
+  ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #eee;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+  /* Footer main */
+  .ft-main {
+      padding: 1.25rem 1.875rem;
+      display: flex;
+      flex-wrap: wrap;
+      ul {
+          font-family: "OS-Regular";
+      }
+    }
+    @media only screen and (min-width: 29.8125rem /* 477px */) {
+      .ft-main {
+        justify-content: space-evenly;
+      }
+    }
+    @media only screen and (min-width: 77.5rem /* 1240px */) {
+      .ft-main {
+        justify-content: space-evenly;
+      }
+    }
+    .ft-main-item {
+      padding: 1.25rem;
+      min-width: 12.5rem;
+    }
+    
+    /* Footer main | Newsletter form */
+    form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    input[type="email"] {
+      border: 0;
+      padding: 0.625rem;
+      margin-top: 0.3125rem;
+      font-family: "OS-Regular";
+    }
+    input[type="submit"] {
+      background-color: $goldColour;
+      font-family: "OS-Regular";
+      color: #fff;
+      cursor: pointer;
+      border: 0;
+      padding: 0.625rem 0.9375rem;
+      margin-top: 0.3125rem;
+    }
+    /* Footer social */
+    .ft-social {
+      padding: 0 1.875rem 1.25rem;
+    }
+    .ft-social-list {
+      display: flex;
+      justify-content: center;
+      border-top: 1px #777 solid;
+      padding-top: 1.25rem;
+    }
+    .ft-social-list li {
+      margin: 0.5rem;
+      font-size: 1.25rem;
+    }
+    /* Footer legal */
+    .ft-legal {
+      padding: 0.9375rem 1.875rem;
+      background-color: $redBackground;
+      font-family: "OS-Regular";
+      font-size: small;
+    }
+    .ft-legal-list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .ft-legal-list li {
+      margin: 0.125rem 0.625rem;
+      white-space: nowrap;
+    }
+    /* one before the last child */
+    .ft-legal-list li:nth-last-child(2) {
+        flex: 1;
+    }
+}

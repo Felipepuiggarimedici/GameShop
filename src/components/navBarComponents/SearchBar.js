@@ -23,6 +23,7 @@ const SearchBar = () => {
     const attemptSearch = async(e) => {
         e.preventDefault();
         const namesAndIds = await retrieveNamesAndIds();
+        let foundGames = [];
         let searchString = e.target.value;
         if (searchString === "") {
             navigate(``);
@@ -35,16 +36,18 @@ const SearchBar = () => {
         const names = namesAndIds.map((game) => game.name.toLowerCase());
         //checks if the game that is exactly the one searched for exists
         if (names.includes(searchString.toLowerCase())) {
-            setResult(...result, namesAndIds.find(game => game.name.toLowerCase() === searchString.toLowerCase()).id);
+            foundGames = namesAndIds.filter(game => game.name.toLowerCase() === searchString.toLowerCase())
+            setResult(foundGames.map((game) => game.id));
         }
         else {
             //checks if the name is written in a shorter version
             const shortVersionNames = names.map((name) => name.slice(0, searchString.length));
             if (shortVersionNames.includes(searchString.toLowerCase()) && searchString !== "") {
-                setResult([...result, namesAndIds.find(game => game.name.slice(0, searchString.length).toLowerCase() === searchString.toLowerCase()).id]);
+                foundGames = namesAndIds.filter(game => game.name.slice(0, searchString.length).toLowerCase() === searchString.toLowerCase());
+                setResult([foundGames.map((game) => game.id)]);
                 if (result.length !== 0) {
                     //removes duplicates from result
-                    setResult([...new Set(result)])
+                    setResult([...new Set([foundGames.map((game) => game.id)])])
                 }
             }
             else if (searchString !== "") {

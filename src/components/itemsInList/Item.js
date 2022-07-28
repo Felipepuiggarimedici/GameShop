@@ -13,7 +13,7 @@ const Item = (props) => {
 
           <div className="contentBox">
             <h3 className="titleInListing">{props.name}</h3>
-            <h2 className="price">{props.price}$</h2>
+            <h2 className="price">${props.price}</h2>
             <p className="buy">Buy Now</p>
           </div>
 

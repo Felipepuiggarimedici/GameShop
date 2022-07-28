@@ -16,11 +16,6 @@ function Particle() {
             "enable": true,
             "zIndex": -10
         },
-        /*particles: {
-            "color": {
-              "value": "#ffffff",
-            },
-        }*/
     };
     return <>
     <Particles

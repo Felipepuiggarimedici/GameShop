@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
 import getCategories from '../../helpers/getCategories';
+import LoadingScreen from "../generalComponents/LoadingScreen.js";
 
 const Menu = () => {
-    const categories = getCategories();
+    const [loadingCategories, setLoadingCategories] = useState(true);
+    const [categories, setCategories] = useState([]);
+    const loadCategories = async() => {
+        const response = await getCategories();
+        setCategories(response);
+        setLoadingCategories(false);
+    };
+
+    useEffect(() => {
+        loadCategories()
+    }, []); 
+
     return <>
     <div className='MenuContainer'>
         <div className="dropdown">
@@ -13,11 +25,12 @@ const Menu = () => {
                     <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
                 </svg>
             </button>
-            <div className="dropdown-content">
-                {categories.map((category) => 
-                    <Link key={category} to={`/category/${category}`} >{category}</Link>
+            <ul className="dropdown-content">
+                { loadingCategories ? <LoadingScreen/> :
+                categories.map((category) => 
+                    <Link key={category.id} to={`/category/${category.id}`} >{category.name}</Link>
                 )}
-            </div>
+            </ul>
         </div>
     </div>
     </>
