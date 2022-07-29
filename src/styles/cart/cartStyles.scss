@@ -55,18 +55,35 @@
             justify-content: flex-end;
             .pricingAndButttons {
                 margin-right: 10%;
-                width: 50%;
+                width: 100%;
                 display: grid;
-                grid-template-columns: 60% 40%;
+                grid-template-columns: 30% 30% 40%;
+                .quantityInCart {
+                    font-family: "OS-Heavy";
+                    font-size: 130%;
+                    margin-left: 10%;
+                }
                 .itemPricing {
                     font-family: "OS-Heavy";
-                    font-size: 150%;
+                    font-size: 130%;
                 }
                 .removeInCart {
                     background: $redColour;
                     font-family: "OS-Regular";
+                    font-size: larger;
                     border-radius: 30px;
                     cursor: pointer;
+                    margin-right: 10%;
+                }
+                > * {
+                    margin-right: 40%;
+                }
+                @media screen and (max-width: 1250px) {
+                    .removeInCart {
+                        margin-right: 4%;
+                        height: 60px;
+                        font-size: 120%;
+                    }
                 }
             }
         }
@@ -133,5 +150,90 @@
         font-family: "OS-Regular";
         margin-right: 10%;
         font-size: medium;
+    }
+}
+@media screen and (max-width: 900px) {
+    .cartItemsContainer {
+        .itemInCartContainer {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            .componentAOfItemInCart {
+                padding-bottom: 5%;
+                border-bottom: dotted;
+                border-bottom-width: 2px;
+                border-color: $goldColour;
+            }
+            .componentBOfItemInCart {
+                padding-top: 4%;
+                .pricingAndButttons {
+                    margin-right: 1%;
+                    margin-left: 4%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .totalPricing {
+        .finalPrice {
+            margin-left: 40%;
+        }
+    }
+}
+@media screen and (max-width: 660px) {
+    .totalPricing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+            margin-right: 10%;
+            width: 10%;
+        }
+        .finalPrice {
+            width: 20%;
+            margin-left: 30%;
+        }
+        .proceedToPayment {
+            font-size: 100% !important;
+        }
+        .smallGoldButtonContainer {
+            width: 90%;
+            a {
+                margin-right: 25% !important;
+            }
+            button {
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 380px) {
+    .componentAOfItemInCart {
+        height: auto !important;
+        display: flex !important;
+        .imageInCart {
+            display: none !important;
+        }
+    }
+    .pricingAndButttons {
+        display: flex !important;
+        flex-wrap: wrap;
+        .quantityInCart {
+            margin-left: 1% !important;
+            margin-right: 15% !important;
+        }
+        .itemPricing {
+            margin-right: 1% !important;
+        }
+    }
+    .totalPricing {
+        justify-content: baseline;
+        p {
+            width: 30%;
+            margin-left: 2% !important;
+            margin-right: 10% !important;
+        }
     }
 }

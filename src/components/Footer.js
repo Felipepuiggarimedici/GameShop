@@ -8,7 +8,7 @@ const Footer = ({absolutePosition}) => {
             <section className="ft-main">
                 <div className="ft-main-item">
                     <h2 className="ft-title">About</h2>
-                    <p className="aboutTextInFooter">This is a ficticious e-commerce created with React. Enjoy!</p>
+                    <p className="aboutTextInFooter">This is a ficticious e-commerce created with React. I hope you like it!!</p>
                 </div>
                 <div className="ft-main-item">
                     <h2 className="ft-title">Repository</h2>

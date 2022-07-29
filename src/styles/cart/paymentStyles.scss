@@ -95,3 +95,21 @@
     margin-right: 4%;
     margin-left: 4%;
 }
+@media screen and (max-width: 780px) {
+    .purchaseFormContainer {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .purchaseFormContainer {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .purchaseFormContainer {
+        > * {
+            width: 80%;
+            font-size: medium   ;
+        }
+    }
+}

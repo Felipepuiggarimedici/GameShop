@@ -19,4 +19,18 @@
   }
   a:link { text-decoration: none; }
 }
-
+@media screen and (max-width: 812px) {
+  .topnav {
+    grid-template-columns: 4% 25% 9% 15% 23% 25%;
+  }
+}
+@media screen and (min-width: 812px) and (max-width: 1024px) {
+  .topnav {
+    grid-template-columns: 4% 30% 7% 20% 20% 20%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  .topnav {
+    grid-template-columns: 1% 40% 4% 17% 20% 20%;
+  }
+}

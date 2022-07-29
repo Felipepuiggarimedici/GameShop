@@ -26,6 +26,14 @@
     padding-right: 3vw;
     padding-left: 3vw;
     padding-bottom: 1vh;
+    h3 {
+        font-family: "OS-Heavy";
+        font-size: 180%;
+    }
+    p {
+        font-family: "OS-Regular";
+        font-size: 120%;
+    }
 }
 .blankSpace {
     grid-area: "blankSpace"; 

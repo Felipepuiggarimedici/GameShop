@@ -6,9 +6,12 @@ const CartContextComponent = ({children}) => {
     
     const [cart, setCart] = useState([]);
 
+    const getCartItem = (id) => {
+        return cart.find(game => game.id === id);
+    }
     const addItem = (newItem) => {
         if (!isInCart(newItem.id)) {
-            setCart([...cart, {quantity: 1, id:newItem.id, name: newItem.name, price: newItem.price}]);
+            setCart([...cart, {quantity: 1, id:newItem.id, name: newItem.name, price: newItem.price, bigImage: newItem.bigImage, image: newItem.image}]);
         }
         else {
             const cartUpdated = cart.map((cartItem) => {
@@ -58,7 +61,7 @@ const CartContextComponent = ({children}) => {
     }
 
     return <>
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, getQuantity}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, getQuantity, getCartItem}}>
             {children}
         </CartContext.Provider>
     </>

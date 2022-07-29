@@ -38,7 +38,7 @@ const ItemDetailContainer = () => {
     return <>
         {loading ? <LoadingScreen/> : noGameFound ? <GeneralMessage message="No Game Found" />  :
             <div className="itemDetailContainer">
-                <ItemDetail name = {game.name} price = {game.price} smallImage={game.image} image={game.bigImage} details={game.description} id={game.id}/>
+                <ItemDetail name = {game.name} price = {game.price} smallImage={game.image} image={game.image} bigImage={game.bigImage} details={game.description} id={game.id}/>
             </div>}
         <Footer absolutePosition={loading || noGameFound}/>
     </>

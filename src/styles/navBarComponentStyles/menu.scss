@@ -70,3 +70,58 @@
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: $goldColour;}
+
+@media screen and (max-width: 812px) {
+  .MenuContainer {
+    .dropdown {
+      width: 60%;
+      .dropbtn {
+        font-size: 60%;
+      }
+      .dropdown-content {
+        min-width: 80px;
+        height: 32vh;
+        a {
+         padding: 5px 10px;
+          font-size: large;
+          height: auto;
+          padding-bottom: 10%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 667px) and (max-width: 812px) {
+  .MenuContainer {
+    .dropdown {
+      .dropbtn {
+        font-size: 76%;
+      }
+      .dropdown-content {
+        height: 47vh;
+        a {
+          font-size: 90%;
+          height: 18%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 812px) and (max-width: 1024px) { 
+  .MenuContainer {
+    .dropdown {
+      .dropbtn {
+        font-size: 76%;
+      }
+      .dropdown-content {
+        height: 47vh;
+        a {
+          padding: 5px 8px;
+          font-size: 80%;
+          height: 18%;
+        }
+      }
+    }
+  }
+} 
+

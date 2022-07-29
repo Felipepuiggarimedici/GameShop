@@ -19,7 +19,7 @@ const PurchaseForm = forwardRef(({cart, total, clear}, ref) => {
 
     const finalizePurchase = () => {
 
-        const copyOfCartWithSelectedEntries = cart.map((game) => {return {id: game.id, price: game.price, name: game.name}});
+        const copyOfCartWithSelectedEntries = cart.map((game) => {return {id: game.id, price: game.price, name: game.name, quantity: game.quantity}});
         setLoadingPurchase(true);
         const salesCollection = collection(db, "sales");
         addDoc(salesCollection, {

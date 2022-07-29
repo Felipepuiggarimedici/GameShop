@@ -23,7 +23,7 @@ const Cart = () => {
     const calculateCartTotal = () => {
         let total = 0;
         cart.forEach(game => {
-            total = total + parseInt(game.price);
+            total = total + game.quantity * parseInt(game.price);
         });
         if (total === 0) setEndPurchase(false);
         return total;

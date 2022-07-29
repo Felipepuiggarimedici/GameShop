@@ -24,7 +24,7 @@
 .card {
     position: relative;
     width: 380px;
-    height: 550px;
+    height: 570px;
     background: black;
     border-radius: 20px;
     overflow: hidden;
@@ -64,18 +64,6 @@
     padding-top: 20px;
     z-index: 1;
 }
-  /*
-  .card .imgBox img {
-      max-width: 100%;
-      
-      transition: .5s;
-  }
-  
-  .card:hover .imgBox img {
-      max-width: 50%;
-        
-  }
-  */
 .card .contentBox {
     position: relative;
     padding: 10px;
@@ -125,4 +113,50 @@
 .imageInCard {
     height: 300px;
     width: auto;
+}
+@media screen and (max-width: 1280px) {
+    .card {
+        width: 280px;
+        height: 450px;
+        .contentBox {
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .imageInCard {
+        height: 230px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .cardContainer {
+        min-height: 50vh !important;
+    }
+    .card {
+        width: 220px;
+        height: 320px;
+        .contentBox {
+            .titleInListing {
+                font-size: medium;
+                margin-bottom: 2%;
+            }
+            .price {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: medium;
+            }
+            .buy {
+                padding: 8px 20px;
+            }
+        }
+    }
+    .imageInCard {
+        height: 140px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .card {
+        width: 180px;
+    }
 }

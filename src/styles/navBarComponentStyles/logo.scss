@@ -10,8 +10,17 @@
     display: flex;
     align-items: center;
     justify-content: baseline;
-    font-size: 300%;
 }
 .logo {
     font-size: 200%;
+}
+@media screen and (max-width: 500px) {
+    .logo {
+        font-size: 130%;
+    }
+  }
+@media screen and (min-width: 500px) and (max-width: 812px){
+    .logo {
+        font-size: 170%;
+    }
 }
