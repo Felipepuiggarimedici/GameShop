@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/footer.scss";
 
 const Footer = ({absolutePosition}) => {
+    let inputRef = useRef();
+    const navigate = useNavigate();
+    const [searchString, setSearchString] = useState();
+
+    const updateOrderSearch = (e) => {
+        setSearchString(e.target.value)
+    }
+    const attemptSearch = (e) => {
+        if (typeof searchString === "undefined" || searchString === "") {
+            e.preventDefault();
+            inputRef.current.focus();
+        }
+        else {
+            navigate(`/searchOrder/${searchString}`)
+        }
+    }
+
     //credits to Envato Tuts+ in https://codepen.io/tutsplus/pen/yWrEgW
     return <>
         <footer className={absolutePosition ? "absolutePosition": ""}>
@@ -32,9 +50,9 @@ const Footer = ({absolutePosition}) => {
                 <div className="ft-main-item">
                     <h2 className="ft-title">Search Your Order</h2>
                     <p>Enter your order ID to search for your purchase history</p>
-                    <form>
-                        <input type="email" name="email" placeholder="Enter email address"/>
-                        <input type="submit" value="Subscribe"/>
+                    <form onSubmit={attemptSearch}>
+                        <input type="searchOrder" name="searchOrder" placeholder="Enter your order ID" ref={inputRef} onChange={updateOrderSearch}/>
+                        <input type="submit" name="submit" value="Search"/>
                     </form>
                 </div>
             </section>

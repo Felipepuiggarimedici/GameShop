@@ -26,6 +26,7 @@ const Menu = () => {
                 </svg>
             </button>
             <ul className="dropdown-content">
+                <Link key="wishlist" className='wishlistSelector' to="/wishlist">Wishlist</Link>
                 { loadingCategories ? <LoadingScreen/> :
                 categories.map((category) => 
                     <Link key={category.id} to={`/category/${category.id}`} >{category.name}</Link>

@@ -107,6 +107,7 @@
     grid-template-columns: 50% 50%;
     p {
         margin-left: 20%;
+        margin-right: 4%;
     }
     .finalPrice {
         margin-left: 70%;
@@ -234,6 +235,67 @@
             width: 30%;
             margin-left: 2% !important;
             margin-right: 10% !important;
+        }
+    }
+}
+.noImageInCartContainer {
+    height: 20vh !important;
+    padding-top: 3%;
+    .pricingAndButttons {
+        grid-template-columns: 5% 45% 50% !important;
+    }
+    @media screen and (max-width: 900px){
+        height: 20vh !important;
+        .pricingAndButttons {
+            font-size: 80%;
+            .itemPricing {
+                margin-right: 0 !important;
+                margin-left: 40% !important;
+            }
+        }
+    }
+    @media screen and (max-width: 380px) {
+        .pricingAndButttons {
+            display: grid !important;
+            grid-template-columns: 5% 45% 50% !important;
+        }
+    }
+    .noImageInCart {
+        display: flex !important;
+        @extend .centreWithFlex;
+        height: auto !important;
+        @media screen and (max-width: 480px){
+            .titleOfItem {
+                h1 {
+                    font-size: 180%;
+                }
+            }
+        }
+        @media screen and (max-width: 390px){
+            .titleOfItem {
+                h1 {
+                    font-size: 130%;
+                }
+            }
+        }
+        .titleOfItem {
+            border-bottom: solid;
+            border-bottom-width: 2px;
+            border-color: $redColour;
+            padding-right: 6%;
+            padding-left: 6%;
+            h1 {
+                margin-bottom: 2%;
+                margin-top: 2%;
+            }
+        }
+    }
+}
+.purchaseInformation {
+    p {
+        @media screen and (max-width: 500px) {
+            font-size: 80%;
+            margin-left: 4%;
         }
     }
 }

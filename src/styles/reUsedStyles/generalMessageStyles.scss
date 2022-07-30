@@ -4,6 +4,7 @@
     width: 100%;
     @extend .centreWithFlex;
     height: 20vh;
+    margin-top: 4%;
     div {
         @extend .centreWithFlex;
         border-style: solid;
@@ -12,12 +13,29 @@
         border-color: $goldColour;
         width: 50%;
         text-align: center; 
-        height: 10vh;
+        height: 14vh;
         margin-bottom: 2%;  
         background-color: $darkColour;
 
         h1 {
             color: $lightColour;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .generalMessageContainer {
+        height: 30vh;
+        div {
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .generalMessageContainer {
+        div {
+            h1 {
+                font-size: larger !important;
+            }
         }
     }
 }

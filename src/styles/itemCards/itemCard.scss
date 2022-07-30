@@ -145,6 +145,7 @@
                 margin-top: 0;
                 margin-bottom: 0;
                 font-size: medium;
+                font-family: "OS-Regular";
             }
             .buy {
                 padding: 8px 20px;
@@ -159,4 +160,75 @@
     .card {
         width: 180px;
     }
+}
+.priceAndWishlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    .priceContainer {
+        width: 60%;
+    }
+    .price {
+        width: 100%;
+        text-align:end;
+    }
+}
+
+.wrapper {
+    height: 25px;
+    width: 40%;
+    z-index: 4;
+    padding-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .icon-wishlist {
+        padding-left: 10%;
+        padding: 0% !important;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: transparent;
+        border: none;
+        padding: 1%;
+        text-align: start;
+        opacity: .5;
+        &.in-wishlist {
+            opacity: 1;
+            svg {
+                animation-name: wishlist-ani;
+                animation-duration: 1000ms;
+                fill: $goldColour;
+                color: $goldColour;
+            }
+        }
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
+        svg {
+            width: 19%;
+            height: 100%;
+            margin-left: 20%;
+            margin-bottom: 0%;
+            margin-right: 20%;
+            color: $lightColour;
+            fill: $lightColour;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: start;
+        }
+    }
+}
+//credits to https://codepen.io/dee-35/pen/ZEBKrda
+@keyframes wishlist-ani {
+    0%   {transform: scale(1);}
+    25%  {transform: scale(.5);}
+    50%  {transform: scale(1.2);}
+    100% {transform: scale(1);}
 }

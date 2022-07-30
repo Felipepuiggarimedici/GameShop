@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import getDataByCategory from "../../helpers/getDataByCategory";
-import getDataById from "../../helpers/getDataById";
+import getDataByIds from "../../helpers/getDataByIds";
 import ItemList from "./ItemList";
 import "./../../styles/itemCards/cardContainer.scss";
 import "./../../styles/itemCards/purchaseInterface.scss";
@@ -20,9 +20,20 @@ const ItemListContainer = () => {
     const routingInfo = useParams();
 
     const getGames = async(firstSearch) => {
+        if (firstSearch) {
+            sessionStorage.clear()
+        }
         try {
             if (location.startsWith("/search/")) {
-                setResponse(await getDataById(routingInfo));
+                setResponse(await getDataByIds(routingInfo, firstSearch));
+            } else if (location.startsWith("/wishlist")) {
+                const wishlist = JSON.parse(localStorage.getItem("wishlist"));
+                const idArray = wishlist.map((game) => game.id).filter(gameId => gameId !== undefined);
+                try {
+                    setResponse(await getDataByIds(idArray, firstSearch));
+                } catch(error) {
+                    setGameFound(false);
+                }
             }
             else {
                 setResponse(await getDataByCategory(routingInfo, firstSearch));
@@ -54,7 +65,6 @@ const ItemListContainer = () => {
         }
          // eslint-disable-next-line
     }, [response]);
-
     return <>
     {gameFound ?
     <InfiniteScroll dataLength={gameList.length} next={() => getGames(false)} hasMore={moreGamesAvailable} loader={<><LoadingScreen/>\</>} endMessage={loading ? <LoadingScreen/> :<><GeneralMesssage message="Thanks for visiting!"/><Footer absolutePosition={false}/></>}>

@@ -86,7 +86,8 @@
 }
   
 .cardInDetails .contentBox .price {
-    font-size: 24px;
+    font-size: 20px;
+    font-family: "OS-Regular";
     color: #E9FFF9;
     font-weight: 700;
     letter-spacing: 1px;
@@ -153,4 +154,21 @@
             }
         }
     }
+}
+.itemInDetailWrapper {
+    position: absolute;
+    right: 5%;
+    top: 29%;
+    padding: 0;
+    width: 20%;
+    @media screen and (min-width: 1200px) {
+        right: 24%;
+        top: 28%;
+    }
+}
+.itemInDetailWrapper:hover + .itemDetailTopContainer{
+        transform: translate3D(0,-1px,0) scale(1.03); /* move up slightly and zoom in */
+        box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+        transition: all .4s ease; /* zoom in */
+        cursor: pointer;
 }

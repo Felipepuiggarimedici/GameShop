@@ -1,7 +1,9 @@
 @import "./reUsedStyles/importReUsedStyles.scss";
 
 .absolutePosition {
-    position: absolute !important;
+  @media screen and (min-width: 800px) {
+    position: absolute !important; 
+  }
     bottom: 0;
     width: 100%;
 }
@@ -54,7 +56,7 @@ footer {
       display: flex;
       flex-wrap: wrap;
     }
-    input[type="email"] {
+    input[type="searchOrder"] {
       border: 0;
       padding: 0.625rem;
       margin-top: 0.3125rem;
@@ -68,6 +70,14 @@ footer {
       border: 0;
       padding: 0.625rem 0.9375rem;
       margin-top: 0.3125rem;
+    }
+    .ft-main-item {
+      input:focus {
+        border: none;
+        border-width: 0.5px;
+        border: solid;
+        border-color: $goldColour;
+      }
     }
     /* Footer social */
     .ft-social {

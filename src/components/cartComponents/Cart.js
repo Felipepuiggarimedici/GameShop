@@ -41,7 +41,7 @@ const Cart = () => {
         <div className="generalCartContainer">
             <div className="cartItemsContainer">
 
-                {cartCopy.map((game) => <CartItem key={game.id} endPurchase={endPurchase} game={game} removeItem={removeItem}></CartItem>)}
+                {cartCopy.map((game) => <CartItem key={game.id} endPurchase={endPurchase} game={game} removeItem={removeItem} noEndPurchase={false}></CartItem>)}
                 {cartTotal === 0 ? <div className="totalPricing"><p>Nothing in cart</p><div className="backToHomeScreenContainer"><Link to="/" className="backToHomeScreen">Back to home screen</Link></div></div> : <>
                     <div className="totalPricing">
                         <p>

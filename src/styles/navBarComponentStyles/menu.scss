@@ -6,7 +6,6 @@
     .dropdown {
         width: 80%;
         .dropbtn {
-            font-family: 'OS-Regular';
             font-size: 80%;
             width: 100%;
             cursor: pointer;
@@ -45,6 +44,7 @@
     margin-top: 0;
     margin: 0;
     padding: 0;
+    font-family: "OS-Regular";
   }
   /* Links inside the dropdown */
   .dropdown-content a {
@@ -53,7 +53,7 @@
     background-color: #E9FFF9;
     text-decoration: none;
     display: block;
-    height: 18%;
+    height: 20%;
   }
   
   /* Change color of dropdown links on hover */
@@ -64,7 +64,7 @@
     flex-direction: column;
     position: absolute;
     flex-wrap: wrap;
-    height: 50vh;
+    height: 70vh;
     width: fit-content;
     }
   
@@ -80,10 +80,10 @@
       }
       .dropdown-content {
         min-width: 80px;
-        height: 32vh;
+        height: 35vh;
         a {
          padding: 5px 10px;
-          font-size: large;
+          font-size: 60%;
           height: auto;
           padding-bottom: 10%;
         }
@@ -124,4 +124,6 @@
     }
   }
 } 
-
+.wishlistSelector:hover {
+  background-color: $goldColour !important;
+}

@@ -1,10 +1,11 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 const CartContextComponent = ({children}) => {
     
-    const [cart, setCart] = useState([]);
+    //gets cart from localStorage
+    const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem("cart")));
 
     const getCartItem = (id) => {
         return cart.find(game => game.id === id);
@@ -51,7 +52,6 @@ const CartContextComponent = ({children}) => {
     const clear = () => {
         setCart([]);
     }
-    
     const getQuantity = () => {
         let counter = 0;
         cart.forEach((cartItem) => {
@@ -59,6 +59,11 @@ const CartContextComponent = ({children}) => {
         });
         return counter;
     }
+
+    //saves cart in localstorage
+    useEffect(() => {
+        window.localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     return <>
         <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, getQuantity, getCartItem}}>
