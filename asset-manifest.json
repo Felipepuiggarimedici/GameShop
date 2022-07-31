@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.b806127e.css",
-    "main.js": "/static/js/main.e5ddd1c6.js",
-    "static/media/ObjectSans-HeavySlanted.otf": "/static/media/ObjectSans-HeavySlanted.805d101fc4a3a064bedc.otf",
-    "static/media/ObjectSans-Heavy.otf": "/static/media/ObjectSans-Heavy.0ffdfdeae4be2979bc46.otf",
-    "static/media/ObjectSans-Slanted.otf": "/static/media/ObjectSans-Slanted.728423744abe8c2af2f0.otf",
-    "static/media/ObjectSans-Regular.otf": "/static/media/ObjectSans-Regular.8e3ca8a29d32866844a1.otf",
-    "index.html": "/index.html",
-    "main.b806127e.css.map": "/static/css/main.b806127e.css.map",
-    "main.e5ddd1c6.js.map": "/static/js/main.e5ddd1c6.js.map"
+    "main.css": "/gameshoppuiggarimedici/static/css/main.7d663254.css",
+    "main.js": "/gameshoppuiggarimedici/static/js/main.e5ddd1c6.js",
+    "static/media/ObjectSans-HeavySlanted.otf": "/gameshoppuiggarimedici/static/media/ObjectSans-HeavySlanted.805d101fc4a3a064bedc.otf",
+    "static/media/ObjectSans-Heavy.otf": "/gameshoppuiggarimedici/static/media/ObjectSans-Heavy.0ffdfdeae4be2979bc46.otf",
+    "static/media/ObjectSans-Slanted.otf": "/gameshoppuiggarimedici/static/media/ObjectSans-Slanted.728423744abe8c2af2f0.otf",
+    "static/media/ObjectSans-Regular.otf": "/gameshoppuiggarimedici/static/media/ObjectSans-Regular.8e3ca8a29d32866844a1.otf",
+    "index.html": "/gameshoppuiggarimedici/index.html",
+    "main.7d663254.css.map": "/gameshoppuiggarimedici/static/css/main.7d663254.css.map",
+    "main.e5ddd1c6.js.map": "/gameshoppuiggarimedici/static/js/main.e5ddd1c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.b806127e.css",
+    "static/css/main.7d663254.css",
     "static/js/main.e5ddd1c6.js"
   ]
 }
