@@ -1,6 +1,5 @@
 import { getDocs, collection, query, where, orderBy, startAfter, limit } from "firebase/firestore";
 import { db } from "../firebase/firebase.js";
-import getCategoryById from "./getCategooryById.js";
 
 const getDataByCategory = async (category, firstQuery) => {
     //get all data from category or all data if category parameter is empty
@@ -36,7 +35,7 @@ const getDataByCategory = async (category, firstQuery) => {
     }
     else {
       //gets category name through category id
-      const categoryName = await getCategoryById(category.categoryId);
+      const categoryName = category.categoryId;
       if (categoryName === "No category found") {
         return "No result";
       }
