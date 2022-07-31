@@ -5,6 +5,7 @@ export const CartContext = createContext();
 const CartContextComponent = ({children}) => {
     
     const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem("cart")));
+    console.log(cart)
 
     const getCartItem = (id) => {
         return cart.find(game => game.id === id);
