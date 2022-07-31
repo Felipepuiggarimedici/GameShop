@@ -13,13 +13,11 @@ import Footer from './components/Footer.js';
 
 function App() {
   return (
-    <>
     <BrowserRouter>
       <main>
         <CartContextComponent>
           <NavBar />
           <Routes>
-            <Route path="*" element={<><GeneralMesssage message={"404 Error; Page not found"}/><Footer absolutePosition="true"/></>} />
             <Route exact path="" element={<ItemListContainer/>}/>
             <Route exact path="/search/:arrayOfIds" element={<ItemListContainer/>}/>
             <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>
@@ -27,12 +25,12 @@ function App() {
             <Route exact path="/item/:itemId" element={<ItemDetailContainer/>}/>
             <Route exact path="/cart" element={<Cart/>}/>
             <Route exact path="/searchOrder/:orderId" element={<OrderDetails/>}/>
+            <Route path="*" element={<><GeneralMesssage message={"404 Error; Page not found"}/><Footer absolutePosition="true"/></>}/>
           </Routes>
         </CartContextComponent>
       </main>
       <Particle/>
     </BrowserRouter>
-    </>
   );
 }
 

@@ -35,8 +35,6 @@ const ItemList = ({gameList}) => {
     }, [gameListCopy])
     return <> 
         {gameListCopy.map((game) =>
-
-            <div className="cardContainer">
                 <Item 
                 key = {game.id}
                 id = {game.id}
@@ -44,7 +42,6 @@ const ItemList = ({gameList}) => {
                 price = {game.price}
                 image = {game.image}
                 removeFromWishlist={removeFromWishlist}/>    
-            </div>
         )}
     </>
 }

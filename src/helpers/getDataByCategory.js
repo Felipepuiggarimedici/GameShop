@@ -3,6 +3,8 @@ import { db } from "../firebase/firebase.js";
 import getCategoryById from "./getCategooryById.js";
 
 const getDataByCategory = async (category, firstQuery) => {
+    //get all data from category or all data if category parameter is empty
+
     const gamesCollection = collection(db, "gameData");
     let gameSnapshot= null;
     //prevents content being loaded incorrectly upon refreshing

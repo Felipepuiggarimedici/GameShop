@@ -13,7 +13,6 @@ const Cart = () => {
     const [cartCopy, setCartCopy] = useState(cart);
     const [cartTotal, setCartTotal] = useState(0);
     const [endPurchase, setEndPurchase] = useState(false);
-    //reference for scrolling when finishing purchase
     const refForFinishingPurchase = useRef(null);
 
     const handleScroll = () =>{ setTimeout(() => {

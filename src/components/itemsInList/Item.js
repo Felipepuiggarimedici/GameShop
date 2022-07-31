@@ -21,7 +21,7 @@ const Item = (props) => {
   }, [itemInWishlist]);
 
   //Card taken from https://codepen.io/sam_garcia2/pen/PozpPRy
-    return <>
+    return <div className="cardContainer">
         <Link className="card" to={`/item/${props.id}`}>
         
           <div className="imgBox">
@@ -46,7 +46,7 @@ const Item = (props) => {
           </div>
 
         </Link>
-    </>
+      </div>
 }
 
 export default Item;

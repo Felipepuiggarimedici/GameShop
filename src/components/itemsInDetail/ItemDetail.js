@@ -52,9 +52,7 @@ const ItemDetail = (game) => {
             </div>
         </div>
 
-        <div className="descriptionContainer">
-            <Description key="description" descriptionObj={game.details}/>
-        </div>
+        <Description key={game.id} descriptionObj={game.details}/>
     </>
 }
 
