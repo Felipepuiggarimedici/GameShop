@@ -54,7 +54,10 @@ const CartContextComponent = ({children}) => {
     const getQuantity = () => {
         let counter = 0;
         cart.forEach((cartItem) => {
-            counter += cartItem.quantity;
+            try {
+                counter += cartItem.quantity;
+            }
+            catch(error){}
         });
         return counter;
     }
