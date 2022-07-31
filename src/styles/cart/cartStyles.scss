@@ -299,3 +299,23 @@
         }
     }
 }
+.nothingInCart {
+    @extend .centreWithFlex;
+    @media screen and (max-width: 630px) {
+        p {
+            margin-left: 1% !important;
+            margin-right: 1% !important;
+            @media screen and (max-width: 440px) {
+                width: 70% !important;
+                text-align: center;   
+            }
+        }
+        div {
+            a {
+                @media screen and (max-width: 440px) {
+                    margin-left: 0 !important;   
+                }
+            }
+        }
+    }
+}

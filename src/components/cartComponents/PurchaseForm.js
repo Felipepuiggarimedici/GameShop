@@ -11,6 +11,7 @@ const PurchaseForm = forwardRef(({cart, total, clear}, ref) => {
     const [username, setUserName] = useState("");
     const [surname, setSurname] = useState("");
     const [email, setEmail] = useState("");
+    const [confirmEmail, setConfirmEmail] = useState("");
     const [country, setCountry] = useState("");
     const [city, setCity] = useState("");
     const [address, setAddress] = useState("");
@@ -32,7 +33,7 @@ const PurchaseForm = forwardRef(({cart, total, clear}, ref) => {
         })
     }
 
-    let nameRef = useRef();let surnameRef= useRef();let emailRef= useRef();let countryRef= useRef();let cityRef= useRef();let addressRef= useRef();let phoneRef= useRef();let postalRef= useRef();
+    let nameRef = useRef();let surnameRef= useRef();let emailRef= useRef();let confirmEmailRef = useRef();let countryRef= useRef();let cityRef= useRef();let addressRef= useRef();let phoneRef= useRef();let postalRef= useRef();
     const updateName = (e) => {
         setUserName(e.target.value);
     }
@@ -41,6 +42,9 @@ const PurchaseForm = forwardRef(({cart, total, clear}, ref) => {
     }
     const updateEmail = (e) => {
         setEmail(e.target.value);
+    }
+    const updateConfirmEmail = (e) => {
+        setConfirmEmail(e.target.value);
     }
     const updateCountry = (e) => {
         setCountry(e.target.value);
@@ -73,6 +77,10 @@ const PurchaseForm = forwardRef(({cart, total, clear}, ref) => {
         }
         else if (!checkEmail.test(email)) {
             emailRef.current.focus();
+            setDataRejected(true);
+        }
+        else if (confirmEmail !== email) {
+            confirmEmailRef.current.focus();
             setDataRejected(true);
         }
         else if (phone <= 0  || isNaN(phone)) {
@@ -115,6 +123,12 @@ const PurchaseForm = forwardRef(({cart, total, clear}, ref) => {
                     <div className="labelAndInputContainer">
                         <label htmlFor="email">Email</label>
                         <input onChange = {(e) => updateEmail(e)} className="formInput" type="text" id="email" ref={emailRef} name="email" placeholder="john@example.com"></input>
+                    </div>
+                </div>
+                <div className="emailContainer confirmEmailContainer">
+                    <div className="labelAndInputContainer">
+                        <label htmlFor="email">Confirm Email</label>
+                        <input onChange = {(e) => updateConfirmEmail(e)} className="formInput" type="text" id="email" ref={confirmEmailRef} name="email" placeholder="john@example.com"></input>
                     </div>
                 </div>
                 <div className="phoneContainer">
