@@ -18,7 +18,7 @@ function App() {
         <CartContextComponent>
           <NavBar />
           <Routes>
-            <Route exact path="" element={<ItemListContainer/>}/>
+            <Route exact path="/GameShop" element={<ItemListContainer/>}/>
             <Route exact path="/search/:arrayOfIds" element={<ItemListContainer/>}/>
             <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route exact path="/wishlist" element={<ItemListContainer/>}/>
