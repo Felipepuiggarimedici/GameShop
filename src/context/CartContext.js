@@ -5,7 +5,6 @@ export const CartContext = createContext();
 const CartContextComponent = ({children}) => {
     
     const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem("cart")));
-    console.log(cart)
 
     const getCartItem = (id) => {
         return cart.find(game => game.id === id);
@@ -54,12 +53,14 @@ const CartContextComponent = ({children}) => {
     }
     const getQuantity = () => {
         let counter = 0;
-        cart.forEach((cartItem) => {
-            try {
-                counter += cartItem.quantity;
-            }
-            catch(error){}
-        });
+        if (cart !== null) {
+            cart.forEach((cartItem) => {
+                try {
+                    counter += cartItem.quantity;
+                }
+                catch(error){}
+            });
+        }
         return counter;
     }
 
