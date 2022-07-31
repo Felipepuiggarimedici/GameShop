@@ -1,7 +1,7 @@
 {
   "name": "gameshoppuiggarimedici",
   "version": "0.1.0",
-  "homepage": "https://Felipepuiggarimedici.github.io/Gameshop",
+  "homepage": "https://Felipepuiggarimedici.github.io/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
