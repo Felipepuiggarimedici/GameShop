@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const ItemList = ({gameList}) => {
     const location = useLocation().pathname;
-    const isWishlist = location.startsWith("GameShop//wishlist");
+    const isWishlist = location.startsWith("/GameShop/wishlist");
     const [gameListCopy, setGameListCopy] = useState([]);
     const navigate = useNavigate();
 
