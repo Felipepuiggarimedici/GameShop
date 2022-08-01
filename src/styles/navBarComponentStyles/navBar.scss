@@ -34,3 +34,8 @@
     grid-template-columns: 1% 40% 4% 17% 20% 20%;
   }
 }
+.bigSearchBar {
+  @media screen and (min-width: 320px) and (max-width: 420px) {
+    grid-template-columns: 1% 40% 4% 27% 0% 30% !important;
+  }
+}

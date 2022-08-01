@@ -254,6 +254,9 @@
             }
         }
     }
+    @media screen and (max-width: 500px){
+        height: 15vh !important;
+    }
     @media screen and (max-width: 380px) {
         .pricingAndButttons {
             display: grid !important;
@@ -267,11 +270,11 @@
         @media screen and (max-width: 480px){
             .titleOfItem {
                 h1 {
-                    font-size: 180%;
+                    font-size: 160%;
                 }
             }
         }
-        @media screen and (max-width: 390px){
+        @media screen and (max-width: 420px){
             .titleOfItem {
                 h1 {
                     font-size: 130%;

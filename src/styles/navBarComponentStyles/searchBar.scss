@@ -54,12 +54,12 @@ form.example button {
   }
   @media screen and (max-width: 600px) {
     .inputText {
-      margin-right: 20% !important;
+      margin-right: 0 !important;
     }
   }
 @media screen and (min-width: 320px) and (max-width: 420px) {
   .inputText {
     font-size: 50% !important;
-    margin-right: 20% !important;
+    height: 50% !important;
   }
 }
