@@ -1,6 +1,7 @@
 # Gameshop
 Este es mi segundo proyecto Front-End. Se trata de un e-commerce ficticio realizado para el tercer curso de Coderhouse; completando así la carrera de Front-End. Es posible ampliar el detalle de cada videojuego sin recargar la página utilizando el routing de React. A partir de ahí, estos se pueden agregar al carrito. En la vista del carrito, se pueden eliminar artículos y hay un formulario de compra. Luego, la información se sube a firebase y es posible buscar la compra con el formulario en el pie de página.
-
+## Deploy
+Podés acceder al deploy en github pages aquí: https://felipepuiggarimedici.github.io/GameShop
 ## Ejecutar el sitio web directamente desde su repositorio
 Una vez descargado el repositorio, abrílo con tu terminal y:
 * Ejecutá "npm install" y espere a que se descarguen los node'modules. Luego:
