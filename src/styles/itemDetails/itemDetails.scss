@@ -158,12 +158,12 @@
 .itemInDetailWrapper {
     position: absolute;
     right: 5%;
-    top: 34%;
+    top: 27vh;
     padding: 0;
     width: 20%;
     @media screen and (min-width: 1200px) {
         right: 24%;
-        top: 28%;
+        top: 29%;
     }
 }
 .itemInDetailWrapper:hover + .itemDetailTopContainer{
