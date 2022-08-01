@@ -12,10 +12,10 @@ const ItemCount = (props) => {
             </div>
             <div className="smallButtonsBelowEditCart">
                 <div className="smallGoldButtonContainer">
-                    <Link className="smallGoldButton" to="/GameShop/Cart">Proceed to Cart</Link>
+                    <Link className="smallGoldButton" to="/Cart">Proceed to Cart</Link>
                 </div>
                 <div className="smallGoldButtonContainer">
-                    <Link className="smallGoldButton" to="/GameShop">Back to home screen</Link>
+                    <Link className="smallGoldButton" to="/">Back to home screen</Link>
                 </div>
             </div>
         </>
@@ -26,7 +26,7 @@ const ItemCount = (props) => {
             <div className="smallButtonsBelowEditCart">
                 <div className="smallerContainer"></div>
                 <div className="smallGoldButtonContainer biggerGoldButton">
-                    <Link className="smallGoldButton" to="/GameShop">Back to home screen</Link>
+                    <Link className="smallGoldButton" to="/">Back to home screen</Link>
                 </div>
             </div></>
         }

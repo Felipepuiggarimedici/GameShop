@@ -26,7 +26,7 @@ const SearchBar = () => {
         let foundGames = [];
         let searchString = e.target.value;
         if (searchString === "") {
-            navigate(`/GameShop/`);
+            navigate(`/`);
             setResult([]);
         }
         else {
@@ -51,14 +51,14 @@ const SearchBar = () => {
                 }
             }
             else if (searchString !== "") {
-                navigate(`/GameShop/search/noResult`);
+                navigate(`/search/noResult`);
                 setResult([]);
             }
         }
     }
     useEffect(() =>{
         if (searchPerformed && result.length !== 0 ) {
-            navigate(`/GameShop/search/${result}`);
+            navigate(`/search/${result}`);
         }
         // eslint-disable-next-line
     }, [searchPerformed, result]);

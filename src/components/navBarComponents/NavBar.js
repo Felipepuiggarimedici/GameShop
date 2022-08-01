@@ -14,7 +14,7 @@ const NavBar = () => {
     return <>
         <header className={`App-header, topnav ${quantityInCart === 0 ? "bigSearchBar" : ""}`}>
             <div className="blankSpace"></div>
-            <Link className ="logoContainer" to="/GameShop"><h1 className="logo">Gameshop</h1></Link>
+            <Link className ="logoContainer" to="/"><h1 className="logo">Gameshop</h1></Link>
             <div className="blankSpace"></div>
             <Menu/>
             {quantityInCart === 0 ? <><div className="blankContainer"></div><SearchBar/></>: <><SearchBar /><CartWidget quantityInCart={quantityInCart}/></>}

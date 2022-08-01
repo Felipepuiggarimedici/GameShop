@@ -22,7 +22,7 @@ const Item = (props) => {
 
   //Card taken from https://codepen.io/sam_garcia2/pen/PozpPRy
     return <div className="cardContainer">
-        <Link className="card" to={`/GameShop/item/${props.id}`}>
+        <Link className="card" to={`/item/${props.id}`}>
         
           <div className="imgBox">
             <img src={props.image} alt={props.name} className="imageInCard"/>
