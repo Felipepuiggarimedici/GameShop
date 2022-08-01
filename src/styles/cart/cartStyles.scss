@@ -32,14 +32,17 @@
         padding-bottom: 3%;
         .componentAOfItemInCart {
             height: 35vh;
+            @media screen and (max-width:610px) and (min-width: 380px) {
+                
+            }
             width: 100%;
             display: grid;
             grid-template-rows: 30% 70%;
             .titleOfItem {
-                margin-left: 20%;
-                margin-right: 20%;
+                margin-left: 4%;
+                margin-right: 4%;
                 text-align: center;
-                font-size: smaller;
+                font-size: 80%;
                 @extend .centreWithFlex;
             }
             .imageInCart {
