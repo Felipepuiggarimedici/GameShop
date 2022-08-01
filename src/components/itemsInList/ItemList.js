@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const ItemList = ({gameList}) => {
     const location = useLocation().pathname;
-    const isWishlist = location.startsWith("/wishlist");
+    const isWishlist = location.startsWith("GameShop//wishlist");
     const [gameListCopy, setGameListCopy] = useState([]);
     const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ const ItemList = ({gameList}) => {
         } catch(error) {
         } finally {
             if (gameListCopy.length === 0 && isWishlist) {
-                navigate("/wishlist");
+                navigate("/GameShop/wishlist");
             }
         }
         // eslint-disable-next-line
