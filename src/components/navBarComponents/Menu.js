@@ -29,7 +29,7 @@ const Menu = () => {
                 <Link key="wishlist" className='wishlistSelector' to="/wishlist">Wishlist</Link>
                 { loadingCategories ? <LoadingScreen/> :
                 categories.map((category) => 
-                    <Link key={category.id} to={`//category/${category.name}`} >{category.name}</Link>
+                    <Link key={category.id} to={`/category/${category.name}`} >{category.name}</Link>
                 )}
             </ul>
         </div>
