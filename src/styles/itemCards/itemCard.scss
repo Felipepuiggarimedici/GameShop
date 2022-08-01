@@ -131,24 +131,30 @@
 }
 @media screen and (max-width: 600px) {
     .cardContainer {
-        min-height: 50vh !important;
+        min-height: 44vh !important;
     }
     .card {
         width: 220px;
-        height: 320px;
+        height: 310px;
         .contentBox {
             .titleInListing {
-                font-size: medium;
+                font-size: 90%;
                 margin-bottom: 2%;
+                margin-top: 1%;
+            }
+            .priceAndWishlist {
+                margin-top: 2%;
             }
             .price {
                 margin-top: 0;
                 margin-bottom: 0;
-                font-size: medium;
+                font-size: small;
                 font-family: "OS-Regular";
             }
             .buy {
-                padding: 8px 20px;
+                margin-top: 4%;
+                padding: 7px 14px;
+                font-size: small;
             }
         }
     }
