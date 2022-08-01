@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/GameShop/static/css/main.c5f51241.css",
-    "main.js": "/GameShop/static/js/main.055e9a1b.js",
-    "static/media/ObjectSans-HeavySlanted.otf": "/GameShop/static/media/ObjectSans-HeavySlanted.805d101fc4a3a064bedc.otf",
-    "static/media/ObjectSans-Heavy.otf": "/GameShop/static/media/ObjectSans-Heavy.0ffdfdeae4be2979bc46.otf",
-    "static/media/ObjectSans-Slanted.otf": "/GameShop/static/media/ObjectSans-Slanted.728423744abe8c2af2f0.otf",
-    "static/media/ObjectSans-Regular.otf": "/GameShop/static/media/ObjectSans-Regular.8e3ca8a29d32866844a1.otf",
-    "index.html": "/GameShop/index.html",
-    "main.c5f51241.css.map": "/GameShop/static/css/main.c5f51241.css.map",
-    "main.055e9a1b.js.map": "/GameShop/static/js/main.055e9a1b.js.map"
+    "main.css": "/static/css/main.703fda62.css",
+    "main.js": "/static/js/main.e769efe1.js",
+    "static/media/ObjectSans-HeavySlanted.otf": "/static/media/ObjectSans-HeavySlanted.805d101fc4a3a064bedc.otf",
+    "static/media/ObjectSans-Heavy.otf": "/static/media/ObjectSans-Heavy.0ffdfdeae4be2979bc46.otf",
+    "static/media/ObjectSans-Slanted.otf": "/static/media/ObjectSans-Slanted.728423744abe8c2af2f0.otf",
+    "static/media/ObjectSans-Regular.otf": "/static/media/ObjectSans-Regular.8e3ca8a29d32866844a1.otf",
+    "index.html": "/index.html",
+    "main.703fda62.css.map": "/static/css/main.703fda62.css.map",
+    "main.e769efe1.js.map": "/static/js/main.e769efe1.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5f51241.css",
-    "static/js/main.055e9a1b.js"
+    "static/css/main.703fda62.css",
+    "static/js/main.e769efe1.js"
   ]
 }
