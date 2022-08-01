@@ -115,6 +115,10 @@
     width: auto;
 }
 @media screen and (max-width: 1280px) {
+    .cardContainer {
+        margin-bottom: 5%;
+        margin-top: 8%;
+    }
     .card {
         width: 280px;
         height: 450px;
@@ -131,7 +135,9 @@
 }
 @media screen and (max-width: 600px) {
     .cardContainer {
-        min-height: 44vh !important;
+        min-height: 48vh !important;
+        margin-bottom: 5%;
+        margin-top: 8%;
     }
     .card {
         width: 220px;
