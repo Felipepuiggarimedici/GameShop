@@ -16,7 +16,7 @@ const Footer = ({absolutePosition}) => {
             inputRef.current.focus();
         }
         else {
-            navigate(`/searchOrder/${searchString}`)
+            navigate(`/GameShop/searchOrder/${searchString}`)
         }
     }
 

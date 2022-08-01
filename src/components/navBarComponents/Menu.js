@@ -26,10 +26,10 @@ const Menu = () => {
                 </svg>
             </button>
             <ul className="dropdown-content">
-                <Link key="wishlist" className='wishlistSelector' to="/wishlist">Wishlist</Link>
+                <Link key="wishlist" className='wishlistSelector' to="/GameShop/wishlist">Wishlist</Link>
                 { loadingCategories ? <LoadingScreen/> :
                 categories.map((category) => 
-                    <Link key={category.id} to={`/category/${category.name}`} >{category.name}</Link>
+                    <Link key={category.id} to={`/GameShop/category/${category.name}`} >{category.name}</Link>
                 )}
             </ul>
         </div>

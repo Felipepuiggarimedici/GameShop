@@ -19,13 +19,13 @@ function App() {
           <NavBar />
           <Routes>
             <Route exact path="/GameShop" element={<ItemListContainer/>}/>
-            <Route exact path="/search/:arrayOfIds" element={<ItemListContainer/>}/>
-            <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>
-            <Route exact path="/wishlist" element={<ItemListContainer/>}/>
-            <Route exact path="/item/:itemId" element={<ItemDetailContainer/>}/>
-            <Route exact path="/cart" element={<Cart/>}/>
-            <Route exact path="/searchOrder/:orderId" element={<OrderDetails/>}/>
-            <Route path="*" element={<><GeneralMesssage message={"404 Error; Page not found"}/><Footer absolutePosition="true"/></>}/>
+            <Route exact path="/GameShop/search/:arrayOfIds" element={<ItemListContainer/>}/>
+            <Route exact path="/GameShop/category/:categoryId" element={<ItemListContainer/>}/>
+            <Route exact path="/GameShop/wishlist" element={<ItemListContainer/>}/>
+            <Route exact path="/GameShop/item/:itemId" element={<ItemDetailContainer/>}/>
+            <Route exact path="/GameShop/cart" element={<Cart/>}/>
+            <Route exact path="/GameShop/searchOrder/:orderId" element={<OrderDetails/>}/>
+            <Route path="/GameShop/*" element={<><GeneralMesssage message={"404 Error; Page not found"}/><Footer absolutePosition="true"/></>}/>
           </Routes>
         </CartContextComponent>
       </main>

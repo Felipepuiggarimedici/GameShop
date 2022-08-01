@@ -4,7 +4,11 @@ export const CartContext = createContext();
 
 const CartContextComponent = ({children}) => {
     
-    const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem("cart")));
+    let getCartFromLocal = JSON.parse(window.localStorage.getItem("cart"));
+    if (getCartFromLocal === null) {
+        getCartFromLocal = [];
+    }
+    const [cart, setCart] = useState(getCartFromLocal);
 
     const getCartItem = (id) => {
         return cart.find(game => game.id === id);
@@ -41,11 +45,13 @@ const CartContextComponent = ({children}) => {
     }
     const isInCart = (itemId) => {
         let isInCart = false;
-        cart.forEach(item => {
-            if (item.id === itemId) {
-                isInCart = true;
-            }
-        });
+        if (cart !== null) {
+            cart.forEach(item => {
+                if (item.id === itemId) {
+                    isInCart = true;
+                }
+            });
+        }
         return isInCart;
     }
     const clear = () => {

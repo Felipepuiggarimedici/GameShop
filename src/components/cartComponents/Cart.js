@@ -41,7 +41,7 @@ const Cart = () => {
             <div className="cartItemsContainer">
 
                 {cartCopy.map((game) => <CartItem key={game.id} endPurchase={endPurchase} game={game} removeItem={removeItem} noEndPurchase={false}></CartItem>)}
-                {cartTotal === 0 ? <div className="totalPricing nothingInCart"><p>Nothing in cart</p><div className="backToHomeScreenContainer"><Link to="/" className="backToHomeScreen">Back to home screen</Link></div></div> : <>
+                {cartTotal === 0 ? <div className="totalPricing nothingInCart"><p>Nothing in cart</p><div className="backToHomeScreenContainer"><Link to="/GameShop" className="backToHomeScreen">Back to home screen</Link></div></div> : <>
                     <div className="totalPricing">
                         <p>
                             Total:
@@ -53,7 +53,7 @@ const Cart = () => {
                             {endPurchase ? <></> : <button onClick={() => { setEndPurchase(true); handleScroll() }} className="proceedToPayment">Proceed to Payment</button>}
                         </div>
                         <div className="smallGoldButtonContainer">
-                            <Link className="smallGoldButton" to="/">Back to home screen</Link>
+                            <Link className="smallGoldButton" to="/GameShop">Back to home screen</Link>
                             {endPurchase ?<div></div> : <button className="smallGoldButton" onClick={() => clear()} >Clear cart</button>}
                         </div>
                     </div></>}

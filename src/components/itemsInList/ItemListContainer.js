@@ -24,9 +24,9 @@ const ItemListContainer = () => {
             sessionStorage.clear()
         }
         try {
-            if (location.startsWith("/search/")) {
+            if (location.startsWith("/GameShop/search/")) {
                 setResponse(await getDataByIds(routingInfo, firstSearch));
-            } else if (location.startsWith("/wishlist")) {
+            } else if (location.startsWith("/GameShop/wishlist")) {
                 const wishlist = JSON.parse(localStorage.getItem("wishlist"));
                 const idArray = wishlist.map((game) => game.id).filter(gameId => gameId !== undefined);
                 try {

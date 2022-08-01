@@ -60,7 +60,7 @@ const OrderDetails = () => {
                             {cityAndCountry}
                         </p>
                         <div className="smallGoldButtonContainer">
-                            <Link className="smallGoldButton" to="/">Back to home screen</Link>
+                            <Link className="smallGoldButton" to="/GameShop">Back to home screen</Link>
                         </div>
                     </div>
                 </div>
