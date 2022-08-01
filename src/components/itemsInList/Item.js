@@ -10,8 +10,8 @@ const Item = (props) => {
 
   const addToWishlist = async (e) => {
     e.preventDefault();
-    setItemInWishlist(!itemInWishlist);
     await updateWishlist(props.id);
+    setItemInWishlist(!itemInWishlist);
   }
   useEffect(() => {
     if (!itemInWishlist) {
