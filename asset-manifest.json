@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/GameShop/static/css/main.69bbd69a.css",
+    "main.css": "/GameShop/static/css/main.c5f51241.css",
     "main.js": "/GameShop/static/js/main.055e9a1b.js",
     "static/media/ObjectSans-HeavySlanted.otf": "/GameShop/static/media/ObjectSans-HeavySlanted.805d101fc4a3a064bedc.otf",
     "static/media/ObjectSans-Heavy.otf": "/GameShop/static/media/ObjectSans-Heavy.0ffdfdeae4be2979bc46.otf",
     "static/media/ObjectSans-Slanted.otf": "/GameShop/static/media/ObjectSans-Slanted.728423744abe8c2af2f0.otf",
     "static/media/ObjectSans-Regular.otf": "/GameShop/static/media/ObjectSans-Regular.8e3ca8a29d32866844a1.otf",
     "index.html": "/GameShop/index.html",
-    "main.69bbd69a.css.map": "/GameShop/static/css/main.69bbd69a.css.map",
+    "main.c5f51241.css.map": "/GameShop/static/css/main.c5f51241.css.map",
     "main.055e9a1b.js.map": "/GameShop/static/js/main.055e9a1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.69bbd69a.css",
+    "static/css/main.c5f51241.css",
     "static/js/main.055e9a1b.js"
   ]
 }
