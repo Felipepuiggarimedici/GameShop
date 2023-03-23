@@ -5,7 +5,7 @@ Puede ver la versión en Español haciendo click aquí
 
 This is my second Front-End project. It is about a ficticious e-commerce made for the React course I took with Coderhouse, which is the third one I took with them, thus completing the Front-End career. It is possible to expand the details without reloading the page using React routing. From there, these can be added to the cart. In the Cart view, items can be removed and there is a purchase form. Information is then uploaded to firebase, and it is possible to search the purchase with the form in the footer. 
 ## Deploy
-You can access the deploy of the website in github pages here: https://felipepuiggarimedici.github.io/GameShop
+You can access the deploy of the website in github pages here: https: https://gameshopfelipepuiggarimedici.netlify.app/
 ## Running the website directly from its repository
 Once you downloaded the repository, open it with your terminal and:
 * Run "npm install" and wait for the node-modules to download and later:
